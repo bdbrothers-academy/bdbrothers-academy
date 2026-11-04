@@ -91,11 +91,43 @@ body{font-family:'Poppins','Hind Siliguri',sans-serif}
 <script>
 const groups = ['A','B','C','D','E','F','G','H'];
 let teams = JSON.parse(localStorage.getItem('bd32teams')||'[]');
-if(teams.length===0){
-  teams = Array.from({length:32},(_,i)=>({id:i+1,name:`Team ${i+1}`,group:groups[Math.floor(i/4)],P:0,W:0,D:0,L:0,GD:0,Pts:0}));
+if(teams.length===0 || true){
+  teams = [
+    {id:0, name:"Milu Rahman", district:"Bhola", group:'A'},
+    {id:1, name:"জিবন মিয়া", district:"Brahmanbaria", group:'A'},
+    {id:2, name:"Sayem Ahmed", district:"Sylhet", group:'A'},
+    {id:3, name:"Hm Munna", district:"Noakhali", group:'A'},
+    {id:4, name:"Abdur Rahman", district:"Jashore", group:'B'},
+    {id:5, name:"Redowan Islam", district:"Gazipur", group:'B'},
+    {id:6, name:"Tanvir Ahamed", district:"Noakhali", group:'B'},
+    {id:7, name:"Oseem Mojumder", district:"Noakhali", group:'B'},
+    {id:8, name:"M D Porash", district:"Cumilla", group:'C'},
+    {id:9, name:"Sk Shakib", district:"Lakshmipur", group:'C'},
+    {id:10, name:"Abrar Rihad", district:"Tangail", group:'C'},
+    {id:11, name:"Towhid Ahmed Sani", district:"Sylhet", group:'C'},
+    {id:12, name:"Risha Moni", district:"Chattogram", group:'D'},
+    {id:13, name:"Sheikh Rohul", district:"Munshiganj", group:'D'},
+    {id:14, name:"Fara bi", district:"Chuadanga", group:'D'},
+    {id:15, name:"Naim Ahmed Niloy", district:"Tangail", group:'D'},
+    {id:16, name:"P A R V E J", district:"Jamalpur", group:'E'},
+    {id:17, name:"Mahim Sheikh", district:"Dhaka", group:'E'},
+    {id:18, name:"Imran Hossain Ahad", district:"Cumilla", group:'E'},
+    {id:19, name:"Md Shihab Hossen", district:"Rangpur", group:'E'},
+    {id:20, name:"M D Shimul", district:"Narayanganj", group:'F'},
+    {id:21, name:"Ariful Islam", district:"Gazipur", group:'F'},
+    {id:22, name:"Nirob Dey", district:"Chattogram", group:'F'},
+    {id:23, name:"Mahi Uddin", district:"Feni", group:'F'},
+    {id:24, name:"M D Sohan", district:"Bogura", group:'G'},
+    {id:25, name:"Tahsan Islam", district:"Khulna", group:'G'},
+    {id:26, name:"Naim Islam", district:"Rajshahi", group:'G'},
+    {id:27, name:"Rakib Khan", district:"Barishal", group:'G'},
+    {id:28, name:"M D Yeamin", district:"Cox's Bazar", group:'H'},
+    {id:29, name:"Tufayel Ahamed", district:"Moulvibazar", group:'H'},
+    {id:30, name:"Md Sajib", district:"Sylhet", group:'H'},
+    {id:31, name:"Md Sajjadul Islam", district:"Noakhali", group:'H'},
+  ];
   localStorage.setItem('bd32teams',JSON.stringify(teams));
 }
-
 function renderGroups(){
   const container = document.getElementById('groupsContainer');
   const preview = document.getElementById('groupPreview');
