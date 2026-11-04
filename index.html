@@ -1,97 +1,57 @@
-<div style="background:#111; border:2px solid #00ff88; border-radius:15px; padding:20px; color:white; font-family:sans-serif; max-width:600px; margin:auto; text-align:left;">
+ // BD BROTHERS ACADEMY - eFootball Tournament 2025-26
+// FREE ENTRY TOURNAMENT - FINAL FILE
+// Old files DELETED - This is the ONLY final file
 
-<h2 style="text-align:center; color:#00ff88;">🏆 BD BROTHERS 32 - RULES 🏆</h2>
+const tournamentInfo = {
+  name: "BD BROTHERS ACADEMY eFootball Tournament",
+  entry: "FREE ENTRY",
+  totalPlayers: 32,
+  founder: "Juyel Mia - BARISHAL (ID 7)",
+  organizer: "BD BROTHERS ACADEMY"
+};
 
-<p><b>📌 SECTION 1: MATCH SETTINGS</b><br>
-1. Condition: Excellent<br>
-2. Smart Assist: OFF - ভিডিও প্রমাণ লাগবে 🎥<br>
-3. Substitution: 6 জন<br>
-4. Double Dip: নিষিদ্ধ 🚫</p>
-
-<p><b>⚔️ SECTION 2: GROUP STAGE</b><br>
-5. Injury: ON<br>
-6. Extra Time & PK: OFF<br>
-7. Match Time: 8 মিনিট<br>
-8. Point: Win 3 / Draw 1 / Loss 0<br>
-9. Qualification: প্রতি গ্রুপ থেকে Top 2 R16 এ</p>
-
-<p><b>🔥 SECTION 3: KNOCKOUT</b><br>
-10. Extra Time & PK: R16 থেকে ON<br>
-11. R16: 8 মিনিট | Quarter: 10 | Semi: 10 | FINAL: 15 মিনিট</p>
-
-<div style="background:#00ff88; color:black; text-align:center; padding:10px; border-radius:10px; font-weight:bold;">
-⏰ DEADLINE: শুক্রবার, ৬ নভেম্বর, রাত ৯:০০ টা
-</div>
-
-</div><!DOCTYPE html>
-<html lang="bn">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BD Brothers Academy - 32 Teams Tournament</title>
-<style>
-body{font-family:system-ui;background:#0f172a;color:white;margin:0;padding:15px}
-h1{text-align:center;color:#38bdf8}
-.group{background:#1e293b;margin:15px 0;padding:15px;border-radius:12px}
-.group h2{color:#facc15;margin:0 0 10px 0;border-bottom:1px solid #334155;padding-bottom:5px}
-.team{display:flex;justify-content:space-between;background:#0f172a;margin:5px 0;padding:10px 12px;border-radius:8px}
-.team span:last-child{color:#94a3b8;font-size:13px}
-.header{text-align:center;padding:20px 0}
-.logo{font-size:28px;font-weight:900}
-</style>
-</head>
-<body>
-<div class="header">
-<div class="logo">🏆 BD BROTHERS ACADEMY</div>
-<div style="color:#94a3b8">32 Teams Championship 2026</div>
-</div>
-<div id="app"></div>
-<script>
-let teams = [
-  {id:0, name:"Milu Rahman", district:"Bhola", group:'A'},
-  {id:1, name:"জিবন মিয়া", district:"Brahmanbaria", group:'A'},
-  {id:2, name:"Sayem Ahmed", district:"Sylhet", group:'A'},
-  {id:3, name:"Hm Munna", district:"Noakhali", group:'A'},
-  {id:4, name:"Abdur Rahman", district:"Jashore", group:'B'},
-  {id:5, name:"Redowan Islam", district:"Gazipur", group:'B'},
-  {id:6, name:"Tanvir Ahamed", district:"Netrokona", group:'B'},
-  {id:7, name:"Oseem Mojumder", district:"Netrokona", group:'B'},
-  {id:8, name:"M D Porash", district:"Cumilla", group:'C'},
-  {id:9, name:"Sk Shakib", district:"Lakshmipur", group:'C'},
-  {id:10, name:"Abrar Rihad", district:"Tangail", group:'C'},
-  {id:11, name:"Towhid Ahmed Sani", district:"Sylhet", group:'C'},
-  {id:12, name:"Risha Moni", district:"Chattogram", group:'D'},
-  {id:13, name:"Sheikh Rohul", district:"Munshiganj", group:'D'},
-  {id:14, name:"Fara bi", district:"Chuadanga", group:'D'},
-  {id:15, name:"Naim Ahmed Niloy", district:"Tangail", group:'D'},
-  {id:16, name:"P A R V E J", district:"Jamalpur", group:'E'},
-  {id:17, name:"Mahim Sheikh", district:"Dhaka", group:'E'},
-  {id:18, name:"Imran Hossain Ahad", district:"Cumilla", group:'E'},
-  {id:19, name:"Md Shihab Hossen", district:"Rangpur", group:'E'},
-  {id:20, name:"M D Shimul", district:"Narayanganj", group:'F'},
-  {id:21, name:"Ariful Islam", district:"Gazipur", group:'F'},
-  {id:22, name:"Nirob Dey", district:"Chattogram", group:'F'},
-  {id:23, name:"Mahi Uddin", district:"Feni", group:'F'},
-  {id:24, name:"M D Sohan", district:"Bogura", group:'G'},
-  {id:25, name:"Tahsan Islam", district:"Khulna", group:'G'},
-  {id:26, name:"Naim Islam", district:"Rajshahi", group:'G'},
-  {id:27, name:"Rakib Khan", district:"Barishal", group:'G'},
-  {id:28, name:"M D Yeamin", district:"Cox's Bazar", group:'H'},
-  {id:29, name:"Tufayel Ahamed", district:"Moulvibazar", group:'H'},
-  {id:30, name:"Md Sajib", district:"Sylhet", group:'H'},
-  {id:31, name:"Md Sajjadul Islam", district:"Noakhali", group:'H'},
+const teams = [
+  {id:1, name:"DX Morsalin", district:"BD"},
+  {id:2, name:"M D Porash", district:"BRAHMANBARIA"},
+  {id:3, name:"Naim Ahmed Niloy", district:"TANGAIL"},
+  {id:4, name:"Šk ŠhâKîb", district:"LAKSHMIPUR"},
+  {id:5, name:"Risha Moni", district:"CHATTOGRAM"},
+  {id:6, name:"Dip Debnath Ovi", district:"BD"},
+  {id:7, name:"Juyel Mia", district:"BARISHAL"},
+  {id:8, name:"একটা থাপ্পর দিমু", district:"BD"},
+  {id:9, name:"SHAMIM Hossain", district:"CHADPUR"},
+  {id:10, name:"Milu Rahman", district:"BHOLA"},
+  {id:11, name:"Fara Bi", district:"CHUADANGA"},
+  {id:12, name:"Ewr Johirul Islam", district:"TANGAIL"},
+  {id:13, name:"P A R V E J", district:"JAMALPUR"},
+  {id:14, name:"Roni Ahmed Nir", district:"SIRAJGANJ"},
+  {id:15, name:"Rakib Ahmed", district:"BD"},
+  {id:16, name:"Sakib Belayet", district:"TANGAIL"},
+  {id:17, name:"SK Isteak", district:"BD"},
+  {id:18, name:"জিবন মিয়া", district:"BRAHMANBARIA"},
+  {id:19, name:"Shipon Al Hasan", district:"BD"},
+  {id:20, name:"Abrar Rihad", district:"TANGAIL"},
+  {id:21, name:"Nazmul", district:"BD"},
+  {id:22, name:"NayemurRahman nayem", district:"BD"},
+  {id:23, name:"NayeEm Ul Islam", district:"BD"},
+  {id:24, name:"Sayem Ahmed", district:"SYLHET"},
+  {id:25, name:"MH Munna", district:"MYMENSINGH"},
+  {id:26, name:"Abdur Rahman", district:"HABIGANJ"},
+  {id:27, name:"Tanvir Ahamed", district:"NETROKONA"},
+  {id:28, name:"Redowan Islam", district:"MUNSHIGONJ"},
+  {id:29, name:"Oseem Mojumder", district:"NETROKONA"},
+  {id:30, name:"Md. Hanif", district:"BD"},
+  {id:31, name:"Sheikh Rohul", district:"MUNSHIGANJ"},
+  {id:32, name:"FK Faiag", district:"BD"},
 ];
-const groups = ['A','B','C','D','E','F','G','H'];
-let html='';
-groups.forEach(g=>{
-  html+=`<div class="group"><h2>GROUP ${g}</h2>`;
-  teams.filter(t=>t.group===g).forEach(t=>{
-    html+=`<div class="team"><span>${t.name}</span><span>${t.district}</span></div>`;
-  });
-  html+=`</div>`;
-});
-document.getElementById('app').innerHTML=html;
-localStorage.setItem('bd32teams',JSON.stringify(teams));
-</script>
-</body>
-</html>
+
+const tournamentRules = {
+  rule1: "1. ৩২ জন প্লেয়ার, নো গ্রুপ - সরাসরি নকআউট / লিগ সিস্টেম",
+  rule2: "2. ফ্রি এন্ট্রি টুর্নামেন্ট - কোনো টাকা লাগবে না",
+  rule3: "3. প্রতি ম্যাচ ৮ মিনিট (Extra + PK অন)",
+  rule4: "4. নেট সমস্যা হলে রিম্যাচ, প্রমাণ দিতে হবে",
+  rule5: "5. সময়মতো না আসলে বিপক্ষকে উইন দেওয়া হবে",
+  rule6: "6. গালাগালি / বাজে ব্যবহার করলে ব্যান",
+  rule7: "7. ফাইনাল ৩২ জনের লিস্টই ফাইনাল - আগের সব ডিলিট",
+  rule8: "8. FOUNDER: Juyel Mia (BARISHAL) - ID 7"
+}; 
