@@ -1,57 +1,88 @@
- // BD BROTHERS ACADEMY - eFootball Tournament 2025-26
-// FREE ENTRY TOURNAMENT - FINAL FILE
-// Old files DELETED - This is the ONLY final file
+ <!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BD BROTHERS ACADEMY - EST. 2026</title>
+<style>
+body{background:#000;color:#fff;font-family:Arial,sans-serif;margin:0;padding:10px}
+h1{text-align:center;color:gold;border:3px solid gold;padding:15px;border-radius:15px;background:#111;box-shadow:0 0 15px gold}
+.box{background:#111;border:1px solid gold;border-radius:12px;padding:12px;margin:12px 0}
+.box h2{color:gold;margin:5px 0;font-size:16px}
+.box p{font-size:13px;line-height:18px;margin:4px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card{background:#111;border:2px solid #00ffff;border-radius:15px;overflow:hidden;box-shadow:0 0 10px #00ffff50}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.info{padding:8px;text-align:center;background:#001a1a}
+.info h3{color:#fff;font-size:12px;margin:3px}
+.info p{font-size:10px;color:#00ffff;margin:2px}
+.dist{color:gold !important;font-weight:bold;font-size:11px !important}
+.time-box{background:linear-gradient(45deg,#111,#331a00);border:2px solid #ff9900}
+</style>
+</head>
+<body>
 
-const tournamentInfo = {
-  name: "BD BROTHERS ACADEMY eFootball Tournament",
-  entry: "FREE ENTRY",
-  totalPlayers: 32,
-  founder: "Juyel Mia - BARISHAL (ID 7)",
-  organizer: "BD BROTHERS ACADEMY"
-};
+<h1>🇧🇩 BD BROTHERS ACADEMY<br>EST. 2026</h1>
 
-const teams = [
-  {id:1, name:"DX Morsalin", district:"গোপালগঞ্জ"},
-  {id:2, name:"M D Porash", district:"BRAHMANBARIA"},
-  {id:3, name:"Naim Ahmed Niloy", district:"TANGAIL"},
-  {id:4, name:"Šk ŠhâKîb", district:"LAKSHMIPUR"},
-  {id:5, name:"Risha Moni", district:"CHATTOGRAM"},
-  {id:6, name:"Dip Debnath Ovi", district:"BD"},
-  {id:7name:"Juyel Mia", district:"BARISHAL", img:"received_1685732456511651.jpeg", role:"FOUNDER"},
-  {id:8, name:"একটা থাপ্পর দিমু", district:"BD"},
-  {id:9, name:"SHAMIM Hossain", district:"CHADPUR"},
-  {id:10, name:"Milu Rahman", district:"BHOLA"},
-  {id:11, name:"Fara Bi", district:"CHUADANGA"},
-  {id:12, name:"Ewr Johirul Islam", district:"TANGAIL"},
-  {id:13, name:"P A R V E J", district:"JAMALPUR"},
-  {id:14, name:"Roni Ahmed Nir", district:"SIRAJGANJ"},
-  {id:15, name:"Rakib Ahmed", district:"BD"},
-  {id:16, name:"Sakib Belayet", district:"TANGAIL"},
-  {id:17, name:"SK Isteak", district:"BD"},
-  {id:18, name:"জিবন মিয়া", district:"BRAHMANBARIA"},
-  {id:19, name:"Shipon Al Hasan", district:"BD"},
-  {id:20, name:"Abrar Rihad", district:"TANGAIL"},
-  {id:21, name:"Nazmul", district:"BD"},
-  {id:22, name:"NayemurRahman nayem", district:"BD"},
-  {id:23, name:"NayeEm Ul Islam", district:"BD"},
-  {id:24, name:"Sayem Ahmed", district:"SYLHET"},
-  {id:25, name:"MH Munna", district:"MYMENSINGH"},
-  {id:26, name:"Abdur Rahman", district:"HABIGANJ"},
-  {id:27, name:"Tanvir Ahamed", district:"NETROKONA"},
-  {id:28, name:"Redowan Islam", district:"MUNSHIGONJ"},
-  {id:29, name:"Oseem Mojumder", district:"NETROKONA"},
-  {id:30, name:"Md. Hanif", district:"BD"},
-  {id:31, name:"Sheikh Rohul", district:"MUNSHIGANJ"},
-  {id:32, name:"FK Faiag", district:"BD"},
-];
+<div class="box time-box">
+<h2>⏰ TOURNAMENT TIME - UPDATE</h2>
+<p>📅 <b>শেষ তারিখ: শনিবার, ৭ নভেম্বর ২০২৬</b></p>
+<p>🕘 <b>সময়: রাত ৯:০০ টা পর্যন্ত</b></p>
+<p>👥 মোট প্লেয়ার: 32 জন (এখন 20 জন Confirm)</p>
+<p>💰 Entry Fee: FREE</p>
+<p>🎮 Game: Free Fire - Squad Tournament</p>
+</div>
 
-const tournamentRules = {
-  rule1: "1. ৩২ জন প্লেয়ার, নো গ্রুপ - সরাসরি নকআউট / লিগ সিস্টেম",
-  rule2: "2. ফ্রি এন্ট্রি টুর্নামেন্ট - কোনো টাকা লাগবে না",
-  rule3: "3. প্রতি ম্যাচ ৮ মিনিট (Extra + PK অন)",
-  rule4: "4. নেট সমস্যা হলে রিম্যাচ, প্রমাণ দিতে হবে",
-  rule5: "5. সময়মতো না আসলে বিপক্ষকে উইন দেওয়া হবে",
-  rule6: "6. গালাগালি / বাজে ব্যবহার করলে ব্যান",
-  rule7: "7. ফাইনাল ৩২ জনের লিস্টই ফাইনাল - আগের সব ডিলিট",
-  rule8: "8. FOUNDER: Juyel Mia (BARISHAL) - ID 7"
-}; 
+<div class="box">
+<h2>📜 খেলার নিয়ম - RULES</h2>
+<p>
+1️⃣ প্রতিদিন ২টা করে ম্যাচ হবে<br>
+2️⃣ সময় মতো না আসলে Walkover দেওয়া হবে<br>
+3️⃣ Hack / Cheat / Mod ব্যবহার করলে সাথে সাথে Ban<br>
+4️⃣ গ্রুপ পর্ব + নকআউট সিস্টেম<br>
+5️⃣ Founder এর সিদ্ধান্তই চূড়ান্ত<br>
+6️⃣ শনিবার রাত ৯টার মধ্যে সবাইকে Join করতে হবে<br>
+7️⃣ কোনো প্রকার গালাগালি / খারাপ ব্যবহার করা যাবে না
+</p>
+</div>
+
+<div class="box">
+<h2>👑 FOUNDER</h2>
+<p style="text-align:center;font-size:14px"><b>Juyel Mia - BARISHAL</b><br>FOUNDER & OWNER - BB-A-01</p>
+</div>
+
+<h2 style="text-align:center;color:#00ffff;margin:20px 0 10px 0">🔥 OUR PLAYERS - 20/32 🔥</h2>
+
+<div class="grid">
+
+<div class="card"><img src="juyel.jpg"><div class="info"><h3>Juyel Mia</h3><p class="dist">BARISHAL</p><p>FOUNDER BB-A-01</p></div></div>
+<div class="card"><img src="porash.jpg"><div class="info"><h3>M D Porash</h3><p class="dist">BRAHMANBARIA</p><p>BB-A-02</p></div></div>
+<div class="card"><img src="shakib.jpg"><div class="info"><h3>SK Shakib</h3><p class="dist">LAKSHMIPUR</p><p>BB-A-03</p></div></div>
+<div class="card"><img src="towhid.jpg"><div class="info"><h3>Towhid Ahmed Sani</h3><p class="dist">SYLHET</p><p>BB-A-04</p></div></div>
+<div class="card"><img src="parvej.jpg"><div class="info"><h3>Parvej</h3><p class="dist">JAMALPUR</p><p>BB-A-05</p></div></div>
+<div class="card"><img src="fara.jpg"><div class="info"><h3>Fara Bi</h3><p class="dist">CHUADANGA</p><p>BB-A-06</p></div></div>
+<div class="card"><img src="roni.jpg"><div class="info"><h3>Roni Ahmed Nir</h3><p class="dist">SIRAJGANJ</p><p>BB-A-07</p></div></div>
+<div class="card"><img src="naim.jpg"><div class="info"><h3>Naim Ahmed Niloy</h3><p class="dist">TANGAIL</p><p>BB-A-08</p></div></div>
+<div class="card"><img src="milu.jpg"><div class="info"><h3>Milu Rahman</h3><p class="dist">BHOLA</p><p>BB-A-09</p></div></div>
+<div class="card"><img src="jiban.jpg"><div class="info"><h3>Jiban Mia</h3><p class="dist">BRAHMANBARIA</p><p>BB-A-10</p></div></div>
+<div class="card"><img src="sayem.jpg"><div class="info"><h3>Sayem Ahmed</h3><p class="dist">SYLHET</p><p>BB-A-11</p></div></div>
+<div class="card"><img src="rohul.jpg"><div class="info"><h3>Sheikh Rohul</h3><p class="dist">MUNSHIGANJ</p><p>BB-A-12</p></div></div>
+<div class="card"><img src="risha.jpg"><div class="info"><h3>Risha Moni</h3><p class="dist">CHATTOGRAM</p><p>BB-A-13</p></div></div>
+<div class="card"><img src="munna.jpg"><div class="info"><h3>Hm Munna</h3><p class="dist">MYMENSINGH</p><p>BB-A-14</p></div></div>
+<div class="card"><img src="abrar.jpg"><div class="info"><h3>Abrar Rihad</h3><p class="dist">TANGAIL</p><p>BB-A-15</p></div></div>
+<div class="card"><img src="abdur.jpg"><div class="info"><h3>Abdur Rahman</h3><p class="dist">HABIGANJ</p><p>BB-A-16</p></div></div>
+<div class="card"><img src="tanvir.jpg"><div class="info"><h3>Tanvir Ahamed</h3><p class="dist">NETROKONA</p><p>BB-A-17</p></div></div>
+<div class="card"><img src="redowan.jpg"><div class="info"><h3>Redowan Islam</h3><p class="dist">MUNSHIGONJ</p><p>BB-A-18</p></div></div>
+<div class="card"><img src="oseem.jpg"><div class="info"><h3>Oseem Mojumder</h3><p class="dist">NETROKONA</p><p>BB-A-19</p></div></div>
+<div class="card"><img src="rakib.jpg"><div class="info"><h3>Rakib Ahmed</h3><p class="dist">GAIBANDHA</p><p>BB-A-20</p></div></div>
+
+</div>
+
+<div class="box" style="text-align:center;margin-top:20px">
+<h2>📞 CONTACT</h2>
+<p>WhatsApp Group এ Join করো - শনিবার রাত ৯টার আগে!</p>
+<p style="color:gold">BD BROTHERS ACADEMY - We Are Brothers, We Are Family!</p>
+</div>
+
+</body>
+</html>
