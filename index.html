@@ -1,110 +1,141 @@
  <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BD BROTHERS ACADEMY - 32 PLAYERS</title>
+<title>BD BROTHERS ACADEMY</title>
 <style>
-body{background:#000;color:#fff;font-family:Arial;margin:0;padding:10px}
-h1{text-align:center;color:gold;border:3px solid gold;padding:15px;border-radius:15px;background:#111}
-.box{background:#111;border:2px solid gold;border-radius:12px;padding:12px;margin:12px 0}
-table{width:100%;border-collapse:collapse;background:#111;border-radius:10px;overflow:hidden}
-th{background:gold;color:#000;padding:8px;font-size:11px} td{padding:7px;text-align:center;border-bottom:1px solid #333;font-size:11px}
-tr:nth-child(even){background:#1a1a1a} .dist{color:gold;font-weight:bold} .win{color:#00ff00;font-weight:bold}
-.founder{background:#330000!important;border-left:4px solid gold}
-.rule{color:#00ff00;margin:5px 0;font-size:13px}
-.group{background:#111;border:2px solid #ff9900;border-radius:12px;padding:10px;margin:12px 0}
-.group h3{color:#ff9900;text-align:center} .match{background:#222;padding:8px;margin:5px 0;border-radius:8px;display:flex;justify-content:space-between;font-size:11px}
-.time{color:#00ff00;font-weight:bold} .free{background:#001a00;border:2px solid #00ff00;border-radius:10px;padding:10px;text-align:center}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0a1020;color:#fff;min-height:100vh}
+.top{padding:15px;display:flex;justify-content:space-between;align-items:center;background:#0f172a;border-bottom:1px solid #1e293b}
+.logo{display:flex;align-items:center;gap:10px}
+.logo-icon{width:45px;height:45px;background:#0f172a;border:2px solid #00d4ff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:bold;color:#00d4ff}
+.logo h2{font-size:16px} .logo span{color:#00d4ff;font-size:11px;letter-spacing:3px}
+.join{background:#22d3ee;color:#000;border:none;padding:12px 25px;border-radius:25px;font-weight:bold}
+.hero{padding:20px 15px}
+.hero p{color:#94a3b8;font-size:16px;line-height:1.5}
+.btns{display:flex;gap:12px;margin:20px 0}
+.btn1{background:#fff;color:#000;border:none;padding:14px 20px;border-radius:25px;font-weight:bold;flex:1}
+.btn2{background:#1e293b;color:#fff;border:1px solid #334155;padding:14px 20px;border-radius:25px;font-weight:bold;flex:1}
+.stats{display:flex;gap:12px;margin:20px 0}
+.stat{flex:1;background:#151d32;border:1px solid #1e293b;border-radius:15px;padding:20px 10px;text-align:center}
+.stat h1{color:#22d3ee;font-size:32px} .stat p{color:#64748b;font-size:11px;margin-top:5px;font-weight:bold}
+.live-box{background:#111a30;border:1px solid #1e293b;border-radius:25px;padding:15px;margin:20px 15px}
+.live-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;padding:10px}
+.live-head h2{font-size:20px} .live-badge{background:#0f3a25;color:#22c55e;padding:6px 12px;border-radius:6px;font-size:12px;font-weight:bold}
+.groups{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.g{background:#0f172a;border-radius:15px;padding:12px}
+.g h4{color:#22d3ee;font-size:11px;margin-bottom:8px} .g p{font-size:12px;margin:4px 0;font-weight:bold}
+.district{color:#64748b;font-size:9px;font-weight:normal}
+.founder{color:gold!important}
+.schedule{background:#0f172a;border:2px solid #22d3ee;border-radius:15px;padding:15px;margin:15px;text-align:center}
+.round-box{background:#1a1020;border:2px solid #ff9900;border-radius:15px;padding:15px;margin:15px}
+.round-box h3{color:#ff9900;text-align:center;margin-bottom:10px}
+.match{background:#0f172a;padding:10px;margin:6px 0;border-radius:10px;display:flex;justify-content:space-between;font-size:12px}
+.time{color:#22d3ee;font-weight:bold}
 </style>
 </head>
 <body>
-<h1>🇧🇩 BD BROTHERS ACADEMY<br>eFootball TOURNAMENT</h1>
 
-<div class="free">
-<h2 style="color:#00ff00;margin:0">🎮 FREE ENTRY - সম্পূর্ণ ফ্রি 🎮</h2>
-<p>💰 কোন এন্ট্রি ফি লাগবে না | 👥 32 জন | 🎮 eFootball</p>
-<p style="font-size:12px;color:gold">📅 ৭ নভেম্বর ২০২৬ - রাত ৯টা | ⏳ ৯টার পর Join বাদ</p>
+<div class="top">
+<div class="logo">
+<div class="logo-icon">BD</div>
+<div><h2>BD BROTHERS</h2><span>ACADEMY</span></div>
 </div>
-
-<div class="box">
-<h2 style="color:gold;text-align:center">📜 নিয়ম-কানুন - RULES 📜</h2>
-<p class="rule">1️⃣ দিনে ২টা ম্যাচ - বিকাল ৩টা ও রাত ৮টা</p>
-<p class="rule">2️⃣ সময় মতো না আসলে Walkover</p>
-<p class="rule">3️⃣ Hack করলে সোজা Ban</p>
-<p class="rule">4️⃣ Founder এর সিদ্ধান্ত চূড়ান্ত</p>
-<p class="rule">5️⃣ এমন নাম দিবেন যেন আপনাকে অন্য প্লেয়ারেও খুঁজে পায়</p>
-<p class="rule">6️⃣ জয় = 3 পয়েন্ট</p>
+<button class="join">Join Now</button>
 </div>
 
-<h2 style="text-align:center;color:gold">📊 32 PLAYERS LIST - জেলা সহ + ম্যাচ হিসাব 📊</h2>
-<div style="overflow-x:auto">
-<table>
-<tr><th>#</th><th>নাম</th><th>জেলা</th><th>ম্যাচ</th><th>জয়</th><th>পয়েন্ট</th></tr>
-<tr class="founder"><td>1</td><td>DX Morsalin 👑</td><td class="dist">GOPALGANJ</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>2</td><td>M D Porash</td><td class="dist">BRAHMANBARIA</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>3</td><td>Naim Ahmed Niloy</td><td class="dist">TANGAIL</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>4</td><td>Šk ŠhâKîb</td><td class="dist">LAKSHMIPUR</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>5</td><td>Risha Moni</td><td class="dist">CHATTOGRAM</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>6</td><td>Dip Debnath Ovi</td><td class="dist">CHATTOGRAM</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>7</td><td>Juyel Mia</td><td class="dist">BARISHAL</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>8</td><td>একটা থাপ্পর দিমু</td><td class="dist">DHAKA</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>9</td><td>SHAMIM Hossain</td><td class="dist">RANGPUR</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>10</td><td>Milu Rahman</td><td class="dist">BHOLA</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>11</td><td>Fara Bi</td><td class="dist">CHUADANGA</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>12</td><td>Ewr Johirul Islam</td><td class="dist">KURIGRAM</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>13</td><td>P A R V E J</td><td class="dist">JAMALPUR</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>14</td><td>Roni Ahmed Nir</td><td class="dist">SIRAJGANJ</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>15</td><td>Rakib Ahmed</td><td class="dist">GAIBANDHA</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>16</td><td>Sakib Belayet</td><td class="dist">BARISHAL</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>17</td><td>SK Isteak</td><td class="dist">LAKSHMIPUR</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>18</td><td>জিবন মিয়া</td><td class="dist">BRAHMANBARIA</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>19</td><td>Shipon Al Hasan</td><td class="dist">MAGURA</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>20</td><td>Abrar Rihad</td><td class="dist">TANGAIL</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>21</td><td>Nazmul</td><td class="dist">NARSINGDI</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>22</td><td>NayemurRahman nayem</td><td class="dist">SYLHET</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>23</td><td>NayeEm Ul Islam</td><td class="dist">SYLHET</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>24</td><td>Sayem Ahmed</td><td class="dist">SYLHET</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>25</td><td>MH Munna</td><td class="dist">MYMENSINGH</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>26</td><td>Abdur Rahman</td><td class="dist">HABIGANJ</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>27</td><td>Tanvir Ahamed</td><td class="dist">NETROKONA</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>28</td><td>Redowan Islam</td><td class="dist">MUNSHIGANJ</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>29</td><td>Oseem Mojumder</td><td class="dist">NETROKONA</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>30</td><td>Md. Hanif</td><td class="dist">CUMILLA</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>31</td><td>Sheikh Rohul</td><td class="dist">MUNSHIGANJ</td><td>0</td><td>0</td><td class="win">0</td></tr>
-<tr><td>32</td><td>FK Faiag</td><td class="dist">FENI</td><td>0</td><td>0</td><td class="win">0</td></tr>
-</table>
+<div class="hero">
+<p>BD Brothers eFootball Championship. 8 Groups, 32 Warriors, 1 Champion. Prize Pool 10,000 BDT</p>
+<div class="btns">
+<button class="btn1">Register Team</button>
+<button class="btn2">View Groups</button>
+</div>
+<div class="stats">
+<div class="stat"><h1>32</h1><p>TEAMS</p></div>
+<div class="stat"><h1>8</h1><p>GROUPS</p></div>
+<div class="stat"><h1>1</h1><p>CHAMPION</p></div>
+</div>
 </div>
 
-<h2 style="text-align:center;color:#ff9900;margin-top:20px">🎮 FIXTURE 🎮</h2>
-<div class="group"><h3>GROUP A - বিকাল ৩টা</h3>
-<div class="match"><span>DX Morsalin (GOPALGANJ)</span><span class="time">3:00</span><span>M D Porash</span></div>
-<div class="match"><span>Naim Ahmed Niloy</span><span class="time">3:15</span><span>Šk ŠhâKîb</span></div>
-<div class="match"><span>Risha Moni</span><span class="time">3:30</span><span>Dip Debnath Ovi</span></div>
-<div class="match"><span>Juyel Mia</span><span class="time">3:45</span><span>একটা থাপ্পর দিমু</span></div>
-</div>
-<div class="group"><h3>GROUP B - বিকাল ৪:৩০</h3>
-<div class="match"><span>SHAMIM Hossain</span><span class="time">4:00</span><span>Milu Rahman</span></div>
-<div class="match"><span>Fara Bi</span><span class="time">4:15</span><span>Ewr Johirul Islam</span></div>
-<div class="match"><span>P A R V E J</span><span class="time">4:30</span><span>Roni Ahmed Nir</span></div>
-<div class="match"><span>Rakib Ahmed</span><span class="time">4:45</span><span>Sakib Belayet</span></div>
-</div>
-<div class="group"><h3>GROUP C - রাত ৮টা</h3>
-<div class="match"><span>SK Isteak</span><span class="time">8:00</span><span>জিবন মিয়া</span></div>
-<div class="match"><span>Shipon Al Hasan</span><span class="time">8:15</span><span>Abrar Rihad</span></div>
-<div class="match"><span>Nazmul</span><span class="time">8:30</span><span>NayemurRahman nayem</span></div>
-<div class="match"><span>NayeEm Ul Islam</span><span class="time">8:45</span><span>Sayem Ahmed</span></div>
-</div>
-<div class="group"><h3>GROUP D - রাত ৯:৩০</h3>
-<div class="match"><span>MH Munna</span><span class="time">9:00</span><span>Abdur Rahman</span></div>
-<div class="match"><span>Tanvir Ahamed</span><span class="time">9:15</span><span>Redowan Islam</span></div>
-<div class="match"><span>Oseem Mojumder</span><span class="time">9:30</span><span>Md. Hanif</span></div>
-<div class="match"><span>Sheikh Rohul</span><span class="time">9:45</span><span>FK Faiag</span></div>
+<div class="schedule">
+<h3 style="color:#22d3ee">📅 TOURNAMENT SCHEDULE</h3>
+<p style="margin:8px 0;font-size:13px">🟢 <b>শনিবার গ্রুপ পর্ব শেষ হবে</b></p>
+<p style="margin:8px 0;font-size:13px;color:#ff9900">🔥 এরপরে <b>Round of 16</b> শুরু হবে</p>
+<p style="font-size:11px;color:#64748b">FREE ENTRY | 7 নভেম্বর রাত 9টা | 9টার পর Join বাদ</p>
 </div>
 
-<div class="box" style="border-color:#00ffff;text-align:center">
-<h2 style="color:#00ffff">🏆 FINAL - রবিবার রাত ৯টা 🏆</h2>
-<p>4 গ্রুপ থেকে 16 জন যাবে Round of 16</p>
+<div class="live-box">
+<div class="live-head">
+<h2>Live Groups</h2>
+<span class="live-badge">LIVE DRAW</span>
+</div>
+<div class="groups">
+
+<div class="g"><h4>GROUP A</h4>
+<p class="founder">DX Morsalin <span class="district">GOPALGANJ</span></p>
+<p>M D Porash <span class="district">B.BARIA</span></p>
+<p>Naim Ahmed Niloy <span class="district">TANGAIL</span></p>
+<p>Šk ŠhâKîb <span class="district">LAKSHMIPUR</span></p>
+</div>
+<div class="g"><h4>GROUP B</h4>
+<p>Risha Moni <span class="district">CTG</span></p>
+<p>Dip Debnath Ovi <span class="district">CTG</span></p>
+<p>Juyel Mia <span class="district">BARISHAL</span></p>
+<p>একটা থাপ্পর দিমু <span class="district">DHAKA</span></p>
+</div>
+<div class="g"><h4>GROUP C</h4>
+<p>SHAMIM Hossain <span class="district">RANGPUR</span></p>
+<p>Milu Rahman <span class="district">BHOLA</span></p>
+<p>Fara Bi <span class="district">CHUADANGA</span></p>
+<p>Ewr Johirul Islam <span class="district">KURIGRAM</span></p>
+</div>
+<div class="g"><h4>GROUP D</h4>
+<p>P A R V E J <span class="district">JAMALPUR</span></p>
+<p>Roni Ahmed Nir <span class="district">SIRAJGANJ</span></p>
+<p>Rakib Ahmed <span class="district">GAIBANDHA</span></p>
+<p>Sakib Belayet <span class="district">BARISHAL</span></p>
+</div>
+<div class="g"><h4>GROUP E</h4>
+<p>SK Isteak <span class="district">LAKSHMIPUR</span></p>
+<p>জিবন মিয়া <span class="district">B.BARIA</span></p>
+<p>Shipon Al Hasan <span class="district">MAGURA</span></p>
+<p>Abrar Rihad <span class="district">TANGAIL</span></p>
+</div>
+<div class="g"><h4>GROUP F</h4>
+<p>Nazmul <span class="district">NARSINGDI</span></p>
+<p>NayemurRahman <span class="district">SYLHET</span></p>
+<p>NayeEm Ul Islam <span class="district">SYLHET</span></p>
+<p>Sayem Ahmed <span class="district">SYLHET</span></p>
+</div>
+<div class="g"><h4>GROUP G</h4>
+<p>MH Munna <span class="district">MYMENSINGH</span></p>
+<p>Abdur Rahman <span class="district">HABIGANJ</span></p>
+<p>Tanvir Ahamed <span class="district">NETROKONA</span></p>
+<p>Redowan Islam <span class="district">MUNSHIGANJ</span></p>
+</div>
+<div class="g"><h4>GROUP H</h4>
+<p>Oseem Mojumder <span class="district">NETROKONA</span></p>
+<p>Md. Hanif <span class="district">CUMILLA</span></p>
+<p>Sheikh Rohul <span class="district">MUNSHIGANJ</span></p>
+<p>FK Faiag <span class="district">FENI</span></p>
 </div>
 
-</body>
-</html>
+</div>
+</div>
+
+<div class="round-box">
+<h3>🔥 Round of 16 - শনিবার রাত 10টা থেকে 🔥</h3>
+<div class="match"><span>Group A Winner</span><span class="time">VS</span><span>Group B Runner</span></div>
+<div class="match"><span>Group C Winner</span><span class="time">VS</span><span>Group D Runner</span></div>
+<div class="match"><span>Group E Winner</span><span class="time">VS</span><span>Group F Runner</span></div>
+<div class="match"><span>Group G Winner</span><span class="time">VS</span><span>Group H Runner</span></div>
+<div class="match"><span>Group B Winner</span><span class="time">VS</span><span>Group A Runner</span></div>
+<div class="match"><span>Group D Winner</span><span class="time">VS</span><span>Group C Runner</span></div>
+<div class="match"><span>Group F Winner</span><span class="time">VS</span><span>Group E Runner</span></div>
+<div class="match"><span>Group H Winner</span><span class="time">VS</span><span>Group G Runner</span></div>
+<p style="text-align:center;margin-top:10px;font-size:11px;color:#64748b">শনিবার গ্রুপ পর্ব শেষ হলেই Round of 16 শুরু - 16 জন থেকে 8 জন যাবে কোয়ার্টারে</p>
+</div>
+
+<div style="text-align:center;padding:20px;color:#334155;font-size:11px">
+BD BROTHERS ACADEMY | শনিবার গ্রুপ শেষ | এরপর Round of 16
+</div
