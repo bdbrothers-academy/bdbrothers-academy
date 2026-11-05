@@ -2,7 +2,7 @@
 <html lang="bn">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BD BROTHERS 32</title>
+<title>BD BROTHERS 32 - EDIT FIX</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
 body{background:#0a1020;color:#fff;padding-bottom:30px}
@@ -18,27 +18,30 @@ body{background:#0a1020;color:#fff;padding-bottom:30px}
 .btn{padding:8px 14px;border:none;border-radius:20px;font-weight:bold;cursor:pointer;font-size:12px}
 .btn-gold{background:#facc15;color:#000}
 .btn-cyan{background:#22d3ee;color:#000}
+.btn-red{background:#ff4444;color:#fff}
 .group-box{background:#151b2e;border-radius:18px;padding:14px;margin:14px 12px;border:1px solid #2a344e}
 .group-title{color:#facc15;font-size:15px;font-weight:bold;border-bottom:1px solid #2a344e;padding-bottom:6px;margin-bottom:8px}
 .player-row{display:flex;justify-content:space-between;background:#1e293b;border-radius:11px;padding:8px 10px;margin:4px 0;font-size:12px}
 .pts{color:#22d3ee;font-weight:bold}
-.first{background:#332a00!important;border:1px solid #facc15}
 .mp{color:#facc15;font-weight:bold;background:#000;padding:2px 6px;border-radius:8px;font-size:10px}
+.first{background:#332a00!important;border:1px solid #facc15}
 .tabs{display:flex;gap:6px;margin:12px;overflow-x:auto}
 .tab{padding:8px 14px;background:#1e293b;border-radius:20px;border:1px solid #334155;cursor:pointer;font-size:11px;white-space:nowrap}
 .tab.active{background:#facc15;color:#000;font-weight:bold}
 .ko-box{background:#151b2e;border-radius:14px;padding:12px;margin:10px 12px;border:1px solid #2a344e}
-.match{background:#1e293b;border-radius:10px;padding:8px;margin:6px 0;font-size:12px}
+.match{background:#1e293b;border-radius:10px;padding:8px;margin:6px 0;font-size:12px;display:flex;justify-content:space-between;align-items:center}
 .winner{color:#22ff88;font-weight:bold}
+.match-list{background:#0f172a;border-radius:10px;padding:10px;margin-top:10px;border:1px dashed #334155}
+.match-item{background:#1e293b;padding:6px 8px;margin:4px 0;border-radius:8px;font-size:11px;display:flex;justify-content:space-between;align-items:center}
 </style>
 </head>
 <body>
 <div class="top"><h2>🏆 BD BROTHERS 32 🏆</h2></div>
 <div class="rules">
 <h2 style="text-align:center;color:#facc15;font-size:14px">🏆 RULES 🏆</h2>
-<div class="sec"><h3>📌 SECTION 1</h3><p>Excellent, Smart Assist OFF 🎥, Sub 6, Double Dip 🚫</p></div>
+<div class="sec"><h3>📌 SECTION 1</h3><p>Excellent, Smart Assist OFF, Sub 6, Double Dip 🚫</p></div>
 <div class="sec" style="border-left-color:#00ff88"><h3>⚔️ SECTION 2</h3><p>Time 8m, Win 3 / Draw 1, প্রতি গ্রুপ থেকে 2 জন R16</p></div>
-<div class="sec" style="border-left-color:#ff9900"><h3>🔥 SECTION 3</h3><p>R16 থেকে Extra Time & PK ON | R16 8m | QF 10m | SF 10m | FINAL 15m | তুমি শুধু ফলাফল দিবা, অটো পরের রাউন্ডে যাবে</p></div>
+<div class="sec" style="border-left-color:#ff9900"><h3>🔥 SECTION 3</h3><p>R16 থেকে Extra Time & PK ON | R16 8m | QF 10m | SF 10m | FINAL 15m</p></div>
 </div>
 <div class="deadline"><h2 style="color:#ff4444;font-size:13px">⏰ DEADLINE: শুক্রবার, ৬ নভেম্বর, রাত ৯টা ⏰</h2></div>
 <div class="lock" id="lockBox">
@@ -47,18 +50,19 @@ body{background:#0a1020;color:#fff;padding-bottom:30px}
 <button class="btn btn-gold" onclick="unlock()">🔓 UNLOCK</button>
 </div>
 <div class="admin" id="adminBox">
-<h3 style="color:#22d3ee">⚙️ ফলাফল দাও</h3>
+<h3 style="color:#22d3ee">⚙️ ভুল হলে এখানে ঠিক করো</h3>
 <select id="grp" onchange="loadP()"><option>GROUP A</option><option>GROUP B</option><option>GROUP C</option><option>GROUP D</option><option>GROUP E</option><option>GROUP F</option><option>GROUP G</option><option>GROUP H</option></select>
 <select id="p1"></select> <input type="number" id="g1" placeholder="গোল" style="width:40px"> VS <input type="number" id="g2" placeholder="গোল" style="width:40px"> <select id="p2"></select>
 <button class="btn btn-cyan" id="btnG" onclick="addR()">ADD</button><br><br>
 <select id="koStage"><option value="R16">Round of 16</option><option value="QF">Quarter Final</option><option value="SF">Semi Final</option><option value="F">Final</option></select>
 <select id="koMatch"></select>
 <input type="number" id="ko1" placeholder="গোল" style="width:40px"> VS <input type="number" id="ko2" placeholder="গোল" style="width:40px">
-<button class="btn btn-gold" id="btnK" onclick="addKO()">ADD KO</button><br>
-<button class="btn btn-gold" onclick="lock()" style="margin-top:6px">🔒 LOCK</button>
+<button class="btn btn-gold" id="btnK" onclick="addKO()">ADD KO</button><br><br>
+<div class="match-list" id="matchList"></div>
+<button class="btn btn-gold" onclick="lock()" style="margin-top:8px">🔒 LOCK</button>
 </div>
 <div class="tabs">
-<div class="tab active" onclick="showTab('groups')">GROUP</div>
+<div class="tab active" onclick="showTab('groups')">GROUP - কয়টা খেলছে দেখো</div>
 <div class="tab" onclick="showTab('r16')">R16 - অটো</div>
 <div class="tab" onclick="showTab('qf')">QF - অটো</div>
 <div class="tab" onclick="showTab('sf')">SF - অটো</div>
@@ -132,7 +136,7 @@ let r16=getR16Fixtures();
 let hr='<div class="ko-box"><div class="group-title">ROUND OF 16 - অটো</div>';
 r16.forEach(f=>{
 let res=ko.R16.find(x=>x.id===f.id);
-hr+=`<div class="match">${f.id}. ${res?`${res.t1} ${res.g1}-${res.g2} ${res.t2} → <span class="winner">${res.g1>res.g2?res.t1:res.t2}</span>`: `${f.t1} VS ${f.t2}`}</div>`;
+hr+=`<div class="match"><span>${f.id}. ${res?`${res.t1} ${res.g1}-${res.g2} ${res.t2} → <span class="winner">${res.g1>res.g2?res.t1:res.t2}</span>`: `${f.t1} VS ${f.t2}`}</span></div>`;
 });
 hr+='</div>';
 document.getElementById('tab-r16').innerHTML=hr;
@@ -140,7 +144,7 @@ let hq='<div class="ko-box"><div class="group-title">QF - অটো</div>';
 for(let i=0;i<4;i++){
 let w1=getWinner('R16',i*2+1),w2=getWinner('R16',i*2+2);
 let res=ko.QF.find(x=>x.id===i+1);
-hq+=`<div class="match">QF${i+1}. ${res?`${res.t1} ${res.g1}-${res.g2} ${res.t2}`: `${w1||'R16 W'+(i*2+1)} VS ${w2||'R16 W'+(i*2+2)}`}</div>`;
+hq+=`<div class="match"><span>QF${i+1}. ${res?`${res.t1} ${res.g1}-${res.g2} ${res.t2}`: `${w1||'R16 W'+(i*2+1)} VS ${w2||'R16 W'+(i*2+2)}`}</span></div>`;
 }
 hq+='</div>';
 document.getElementById('tab-qf').innerHTML=hq;
@@ -148,16 +152,30 @@ let hs='<div class="ko-box"><div class="group-title">SF - অটো</div>';
 for(let i=0;i<2;i++){
 let w1=getWinner('QF',i*2+1),w2=getWinner('QF',i*2+2);
 let res=ko.SF.find(x=>x.id===i+1);
-hs+=`<div class="match">SF${i+1}. ${res?`${res.t1} ${res.g1}-${res.g2} ${res.t2}`: `${w1||'QF W'+(i*2+1)} VS ${w2||'QF W'+(i*2+2)}`}</div>`;
+hs+=`<div class="match"><span>SF${i+1}. ${res?`${res.t1} ${res.g1}-${res.g2} ${res.t2}`: `${w1||'QF W'+(i*2+1)} VS ${w2||'QF W'+(i*2+2)}`}</span></div>`;
 }
 hs+='</div>';
 document.getElementById('tab-sf').innerHTML=hs;
 let w1=getWinner('SF',1),w2=getWinner('SF',2);
 let hf='<div class="ko-box"><div class="group-title">🏆 FINAL - অটো 🏆</div>';
 let rf=ko.F[0];
-hf+=`<div class="match" style="background:#332a00;border:2px solid #facc15">FINAL: ${rf?`${rf.t1} ${rf.g1}-${rf.g2} ${rf.t2} → 🏆 ${rf.g1>rf.g2?rf.t1:rf.t2}`: `${w1||'SF1 W'} VS ${w2||'SF2 W'}`}</div></div>`;
+hf+=`<div class="match"><span>FINAL: ${rf?`${rf.t1} ${rf.g1}-${rf.g2} ${rf.t2} → 🏆 ${rf.g1>rf.g2?rf.t1:rf.t2}`: `${w1||'SF1 W'} VS ${w2||'SF2 W'}`}</span></div></div>`;
 document.getElementById('tab-f').innerHTML=hf;
+renderMatchList();
 updateKOSelect();
+}
+function renderMatchList(){
+let html='<b style="color:#facc15">📋 সব ম্যাচ লিস্ট - ভুল হলে ডিলিট করো:</b><br>';
+if(matches.length===0) html+='<span style="color:#94a3b8">কোনো গ্রুপ ম্যাচ নাই</span><br>';
+matches.forEach((m,i)=>{
+html+=`<div class="match-item"><span>${i+1}. ${m.p1} ${m.g1}-${m.g2} ${m.p2}</span><span><button class="btn btn-red" style="padding:4px 8px;font-size:10px" onclick="delMatch(${i})">❌ ডিলিট</button> <button class="btn btn-cyan" style="padding:4px 8px;font-size:10px" onclick="editMatch(${i})">✏️ ঠিক করো</button></span></div>`;
+});
+for(let stage in ko){
+ko[stage].forEach((m,i)=>{
+html+=`<div class="match-item" style="border-left:3px solid #facc15"><span>${stage} ${m.id}. ${m.t1} ${m.g1}-${m.g2} ${m.t2}</span><span><button class="btn btn-red" style="padding:4px 8px;font-size:10px" onclick="delKO('${stage}',${m.id})">❌ ডিলিট</button></span></div>`;
+});
+}
+document.getElementById('matchList').innerHTML=html;
 }
 function showTab(t){
 document.querySelectorAll('[id^=tab-]').forEach(e=>e.style.display='none');
@@ -213,12 +231,10 @@ let g1=parseInt(document.getElementById('g1').value),g2=parseInt(document.getEle
 if(p1===p2){alert('একই প্লেয়ার না!');return;}
 if(isNaN(g1)||isNaN(g2)){alert('গোল লিখো!');return;}
 let dup=matches.find(m=> (m.p1===p1 && m.p2===p2) || (m.p1===p2 && m.p2===p1));
-if(dup){alert('❌ এই ম্যাচ আগেই আছে!');return;}
-document.getElementById('btnG').disabled=true;
+if(dup){alert('❌ এই ম্যাচ আগেই আছে! ডিলিট করে আবার এড করো!');return;}
 matches.push({p1,g1,p2,g2});
 localStorage.setItem('bd32_final', JSON.stringify(matches));
 renderAll();
-setTimeout(()=>document.getElementById('btnG').disabled=false, 1000);
 document.getElementById('g1').value='';document.getElementById('g2').value='';
 }
 function addKO(){
@@ -234,12 +250,36 @@ else if(stage==='SF'){for(let i=0;i<2;i++) fix.push({id:i+1,t1:getWinner('QF',i*
 else if(stage==='F'){fix.push({id:1,t1:getWinner('SF',1),t2:getWinner('SF',2)});}
 let f=fix.find(x=>x.id===id);
 if(!f||!f.t1||!f.t2){alert('এই ম্যাচ এখনো রেডি না!');return;}
-if(ko[stage].find(x=>x.id===id)){alert('এই ম্যাচ আগেই আছে!');return;}
-document.getElementById('btnK').disabled=true;
+ko[stage]=ko[stage].filter(x=>x.id!==id);
 ko[stage].push({id,t1:f.t1,t2:f.t2,g1,g2});
 localStorage.setItem('bd32_ko', JSON.stringify(ko));
 renderAll();
-setTimeout(()=>document.getElementById('btnK').disabled=false, 1000);
+}
+function delMatch(i){
+if(confirm('এই ম্যাচ ডিলিট করবো?')){
+matches.splice(i,1);
+localStorage.setItem('bd32_final', JSON.stringify(matches));
+renderAll();
+}
+}
+function editMatch(i){
+let m=matches[i];
+if(confirm(`${m.p1} ${m.g1}-${m.g2} ${m.p2} - এইটা ঠিক করবা? ডিলিট করে নতুন করে এড করো`)){
+document.getElementById('p1').value=m.p1;
+document.getElementById('p2').value=m.p2;
+document.getElementById('g1').value=m.g1;
+document.getElementById('g2').value=m.g2;
+matches.splice(i,1);
+localStorage.setItem('bd32_final', JSON.stringify(matches));
+renderAll();
+}
+}
+function delKO(stage,id){
+if(confirm(`${stage} ${id} ডিলিট করবো?`)){
+ko[stage]=ko[stage].filter(x=>x.id!==id);
+localStorage.setItem('bd32_ko', JSON.stringify(ko));
+renderAll();
+}
 }
 renderAll();loadP();
 </script>
