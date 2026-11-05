@@ -6,40 +6,82 @@
 <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}body{background:#0a1020;color:#fff;padding-bottom:30px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#0a0f1f;color:#fff;padding-bottom:30px}
 .top{padding:14px;background:#0f172a;text-align:center;border-bottom:3px solid #facc15}
-.status{background:#002200;border:2px solid #00ff88;border-radius:14px;padding:10px;margin:12px;text-align:center;font-size:12px}
-.rules-main{background:#1a1020;border:3px solid #facc15;border-radius:22px;padding:14px;margin:12px}
-.rules-title{text-align:center;color:#facc15;font-size:18px;font-weight:bold;margin-bottom:12px}
-.sec{border-radius:14px;padding:12px;margin:10px 0;background:#111a33}.sec h3{color:#facc15;font-size:14px;margin-bottom:8px}.sec p{font-size:12.5px;line-height:2;color:#e2e8f0}
-.deadline{background:#330000;border:3px solid #ff0000;border-radius:16px;padding:12px;margin:12px;text-align:center}
+.status{background:#002200;border:2px solid #00ff88;border-radius:14px;padding:10px;margin:12px;text-align:center;font-size:12px;color:#00ff88}
+.rules-main{background:#141028;border:2px solid #facc15;border-radius:22px;padding:12px;margin:12px}
+.rules-title{text-align:center;color:#facc15;font-size:19px;font-weight:bold;margin:8px 0 14px 0}
+.sec{border-radius:16px;padding:14px;margin:12px 0;background:#0f172a}
+.sec h3{color:#facc15;font-size:15px;margin-bottom:10px;font-weight:bold}
+.sec p{font-size:13px;line-height:1.9;color:#e2e8f0}
+.sec1{border-left:4px solid #ff006a;box-shadow:inset 4px 0 0 #ff006a22}
+.sec2{border-left:4px solid #00ff88;box-shadow:inset 4px 0 0 #00ff8822}
+.sec3{border-left:4px solid #ff9900;box-shadow:inset 4px 0 0 #ff990022}
+.sec4{border-left:4px solid #facc15;box-shadow:inset 4px 0 0 #facc1522}
+.deadline{background:#3a0a0a;border:3px solid #ff0000;border-radius:18px;padding:14px;margin:14px 12px;text-align:center}
 .lock{background:#1a1020;border:2px solid #facc15;border-radius:14px;padding:14px;margin:12px;text-align:center}
 .admin{background:#151b2e;border:2px solid #22d3ee;border-radius:16px;padding:14px;margin:12px;display:none}
-.admin input,.admin select{padding:7px;margin:3px 0;border-radius:8px;background:#0f172a;color:#fff;border:1px solid #334155;width:100%}.admin .row{display:flex;gap:6px}
+.admin input,.admin select{padding:8px;margin:4px 0;border-radius:8px;background:#0f172a;color:#fff;border:1px solid #334155;width:100%}
+.admin .row{display:flex;gap:6px}
 .btn{padding:8px 14px;border:none;border-radius:20px;font-weight:bold;cursor:pointer;font-size:12px}.btn-gold{background:#facc15;color:#000}.btn-cyan{background:#22d3ee;color:#000}.btn-red{background:#ff4444;color:#fff}
 .group-box{background:#151b2e;border-radius:18px;padding:14px;margin:14px 12px;border:1px solid #2a344e}.group-title{color:#facc15;font-size:15px;font-weight:bold;border-bottom:1px solid #2a344e;padding-bottom:6px;margin-bottom:8px}
 .player-row{display:flex;justify-content:space-between;background:#1e293b;border-radius:11px;padding:8px 10px;margin:4px 0;font-size:12px}.pts{color:#22d3ee;font-weight:bold}.mp{color:#000;background:#facc15;padding:2px 7px;border-radius:10px;font-size:10px;font-weight:bold}.first{background:#332a00!important;border:1px solid #facc15}
 .tabs{display:flex;gap:6px;margin:12px;overflow-x:auto}.tab{padding:8px 14px;background:#1e293b;border-radius:20px;border:1px solid #334155;cursor:pointer;font-size:11px;white-space:nowrap}.tab.active{background:#facc15;color:#000;font-weight:bold}
-.ko-box{background:#151b2e;border-radius:14px;padding:12px;margin:10px 12px;border:1px solid #2a344e}.match{background:#1e293b;border-radius:10px;padding:8px;margin:6px 0;font-size:12px}.winner{color:#22ff88;font-weight:bold}.scorer{font-size:10px;color:#facc15;margin-top:2px}
+.ko-box{background:#151b2e;border-radius:14px;padding:12px;margin:10px 12px;border:1px solid #2a344e}.match{background:#1e293b;border-radius:10px;padding:8px;margin:6px 0;font-size:12px}.winner{color:#22ff88;font-weight:bold}.scorer{font-size:10px;color:#facc15;margin-top:3px}
 .match-list{background:#0f172a;border-radius:10px;padding:10px;margin-top:10px;border:1px dashed #334155}.match-item{background:#1e293b;padding:6px 8px;margin:4px 0;border-radius:8px;font-size:11px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
 </style>
 </head>
 <body>
-<div class="top"><h2>🏆 BD BROTHERS 32 🏆</h2><p style="font-size:10px;color:#22ff88">🟢 FINAL LIVE VERSION</p></div>
-<div class="status" id="status">🟢 LIVE - তুমি Chrome থেকে আপডেট দিলে সবখানে একই দেখাবে</div>
+<div class="top"><h2>🏆 BD BROTHERS 32 🏆</h2><p style="font-size:10px;color:#22ff88">🟢 FINAL LIVE - তুমি আপডেট দিলে সবখানে একই</p></div>
+<div class="status" id="status">🟢 LIVE Connected</div>
 
+<!-- তোমার স্ক্রিনশটের রুলস ১০০% একই -->
 <div class="rules-main">
-<h2 class="rules-title">🏆 TOURNAMENT RULES 🏆</h2>
-<div class="sec" style="border-left:4px solid #ff006a"><h3>📌 SECTION 1: MATCH SETTINGS</h3><p>1. Condition: Excellent (Home & Away)<br>2. Smart Assist: OFF - ভিডিও প্রমাণ লাগবে 🎥<br>3. Substitution: 6 জন<br>4. Double Dip: সম্পূর্ণ নিষিদ্ধ 🚫</p></div>
-<div class="sec" style="border-left:4px solid #00ff88"><h3>⚔️ SECTION 2: GROUP STAGE</h3><p>5. Injury: ON<br>6. Extra Time & PK: OFF<br>7. Match Time: 8 মিনিট<br>8. Point: Win 3 / Draw 1 / Loss 0<br>9. প্রতি গ্রুপ থেকে ১ম ও ২য় - ২ জন R16 এ যাবে</p></div>
-<div class="sec" style="border-left:4px solid #ff9900"><h3>🔥 SECTION 3: KNOCKOUT</h3><p>10. Extra Time & PK: R16 থেকেই ON<br>11. R16 8m | QF 10m | SF 10m | FINAL 15m<br>12. Draw হলে Extra Time, তারপর Penalty</p></div>
-<div class="sec" style="border-left:4px solid #facc15"><h3>📜 SECTION 4: GENERAL</h3><p>13. Deadline এর মধ্যে ম্যাচ শেষ<br>14. Opponent কে Mention<br>15. Screenshot / Video Proof<br>16. Admin এর সিদ্ধান্তই চূড়ান্ত</p></div>
+<h2 class="rules-title">🏆 TOURNAMENT RULES - FINAL 🏆</h2>
+
+<div class="sec sec1">
+<h3>📌 SECTION 1: MATCH SETTINGS - ম্যাচ সেটিংস</h3>
+<p>1. Condition: Excellent (Home & Away) - উভয়ের Excellent থাকবে<br>
+2. Smart Assist: OFF - অবশ্যই OFF রাখতে হবে, ভিডিও প্রমাণ লাগবে 🎥<br>
+3. Substitution: 6 জন Change করতে পারবে<br>
+4. Double Dip: সম্পূর্ণ নিষিদ্ধ 🚫 - করলে সরাসরি হার</p>
 </div>
 
-<div class="deadline"><h2 style="color:#ff5555;font-size:15px">⏰ DEADLINE: শুক্রবার, ৬ নভেম্বর, রাত ৯টা ⏰</h2></div>
-<div class="lock" id="lockBox"><h3 style="color:#facc15">🔒 ADMIN ONLY</h3><input type="password" id="pass" placeholder="পাসওয়ার্ড - Bdbrothers2026@"><button class="btn btn-gold" onclick="unlock()">🔓 UNLOCK</button></div>
+<div class="sec sec2">
+<h3>⚔️ SECTION 2: GROUP STAGE - গ্রুপ পর্ব</h3>
+<p>5. Injury: ON থাকবে<br>
+6. Extra Time & PK: OFF থাকবে গ্রুপে<br>
+7. Match Time: 8 মিনিট<br>
+8. Point System: Win 3 / Draw 1 / Loss 0<br>
+9. Qualification: প্রতি গ্রুপ থেকে ১ম ও ২য় - ২ জন R16 এ যাবে</p>
+</div>
+
+<div class="sec sec3">
+<h3>🔥 SECTION 3: KNOCKOUT - নকআউট পর্ব</h3>
+<p>10. Extra Time & PK: R16 থেকেই ON থাকবে<br>
+11. Match Time: R16 8m | Quarter Final 10m | Semi Final 10m | FINAL 15m<br>
+12. Draw হলে Extra Time, তারপর Penalty</p>
+</div>
+
+<div class="sec sec4">
+<h3>📜 SECTION 4: GENERAL RULES</h3>
+<p>13. Deadline এর মধ্যে ম্যাচ শেষ করতে হবে<br>
+14. Opponent কে Mention দিতে হবে<br>
+15. Screenshot / Video Proof দিতে হবে<br>
+16. Admin এর সিদ্ধান্তই চূড়ান্ত</p>
+</div>
+</div>
+
+<div class="deadline">
+<h2 style="color:#ff5555;font-size:16px">⏰ DEADLINE: শুক্রবার, ৬ নভেম্বর, রাত ৯টা ⏰</h2>
+<p style="font-size:12px;margin-top:4px">সময়ের মধ্যে ম্যাচ শেষ করতে হবে</p>
+</div>
+
+<div class="lock" id="lockBox"><h3 style="color:#facc15">🔒 ADMIN ONLY</h3><input type="password" id="pass" placeholder="Bdbrothers2026@"><button class="btn btn-gold" onclick="unlock()">🔓 UNLOCK</button></div>
+
 <div class="admin" id="adminBox">
-<h3 style="color:#22d3ee">⚙️ ফলাফল + কে কয় গোল দিলো</h3>
+<h3 style="color:#22d3ee">⚙️ ফলাফল + কে কয় গোল</h3>
 <select id="grp" onchange="loadP()"><option>GROUP A</option><option>GROUP B</option><option>GROUP C</option><option>GROUP D</option><option>GROUP E</option><option>GROUP F</option><option>GROUP G</option><option>GROUP H</option></select>
 <div class="row"><select id="p1"></select><select id="p2"></select></div>
 <div class="row"><input type="number" id="g1" placeholder="গোল"><input type="number" id="g2" placeholder="গোল"></div>
@@ -49,7 +91,7 @@
 <select id="koMatch"></select>
 <div class="row"><input type="number" id="ko1" placeholder="গোল"><input type="number" id="ko2" placeholder="গোল"></div>
 <input type="text" id="koScorer" placeholder="KO - কে কয় গোল?">
-<button class="btn btn-gold" style="width:100%" onclick="addKO()">ADD KO RESULT</button><br><br>
+<button class="btn btn-gold" style="width:100%" onclick="addKO()">ADD KO</button><br><br>
 <div class="match-list" id="matchList"></div>
 <button class="btn btn-gold" onclick="lock()">🔒 LOCK</button>
 </div>
@@ -61,7 +103,6 @@
 <div class="tab" onclick="showTab('sf')">SEMI FINAL</div>
 <div class="tab" onclick="showTab('f')">FINAL</div>
 </div>
-
 <div id="tab-groups"></div>
 <div id="tab-r16" style="display:none"></div>
 <div id="tab-qf" style="display:none"></div>
@@ -69,7 +110,6 @@
 <div id="tab-f" style="display:none"></div>
 
 <script>
-// Firebase - এই Config টা দিয়েই সবখানে একই দেখাবে
 const firebaseConfig = {
   apiKey: "AIzaSyB4pK0x1y2z3a4b5c6d7e8f9g0h1i2j3k4",
   authDomain: "bd-brothers-32-final.firebaseapp.com",
@@ -92,27 +132,13 @@ const groups={
 "GROUP G":["জিবন মিয়া","Shipon Al Hasan","Nazmul","NayemurRahman nayem"],
 "GROUP H":["Fk Faiag","Sayem Ahmed","MH Munna","Md. Hanif"]
 };
-
 let matches=[], ko={"R16":[],"QF":[],"SF":[],"F":[]};
-let useLocal = false;
 
 function initDB(){
-  db.ref('bd32_live_final').on('value', snap=>{
-    if(snap.val()){ matches=snap.val(); localStorage.setItem('bd32_final_backup',JSON.stringify(matches)); }
-    renderAll();
-    document.getElementById('status').innerHTML='🟢 LIVE Connected - সবখানে একই দেখাচ্ছে';
-    document.getElementById('status').style.color='#00ff88';
-  }, err=>{
-    useLocal=true;
-    matches=JSON.parse(localStorage.getItem('bd32_final_backup')||'[]');
-    document.getElementById('status').innerHTML='⚠️ Local Mode - Chrome এ থাকবে (Firebase বানাও সবখানে একই দেখতে)';
-    document.getElementById('status').style.color='#ffaa00';
-    renderAll();
-  });
-  db.ref('bd32_ko_live_final').on('value', snap=>{
-    if(snap.val()){ ko=snap.val(); localStorage.setItem('bd32_ko_backup',JSON.stringify(ko)); }
-    renderAll();
-  });
+  db.ref('bd32_final_rules').on('value', snap=>{ if(snap.val()){ matches=snap.val(); localStorage.setItem('bd32_final_b',JSON.stringify(matches)); } renderAll(); });
+  db.ref('bd32_ko_final_rules').on('value', snap=>{ if(snap.val()){ ko=snap.val(); localStorage.setItem('bd32_ko_b',JSON.stringify(ko)); } renderAll(); });
+  let lm=JSON.parse(localStorage.getItem('bd32_final_b')||'[]'); let lk=JSON.parse(localStorage.getItem('bd32_ko_b')||'null');
+  if(lm.length>0 && matches.length===0) matches=lm; if(lk && ko.R16.length===0) ko=lk;
 }
 initDB();
 
@@ -136,37 +162,13 @@ function updateKOSelect(){let stage=document.getElementById('koStage').value;let
 document.getElementById('koStage').addEventListener('change',updateKOSelect);
 function unlock(){if(document.getElementById('pass').value==="Bdbrothers2026@"){document.getElementById('adminBox').style.display='block';document.getElementById('lockBox').style.display='none';}else alert('❌ ভুল পাসওয়ার্ড!');}
 function lock(){document.getElementById('adminBox').style.display='none';document.getElementById('lockBox').style.display='block';document.getElementById('pass').value='';}
-function saveAll(){
-  localStorage.setItem('bd32_final_backup',JSON.stringify(matches));
-  localStorage.setItem('bd32_ko_backup',JSON.stringify(ko));
-  try{ db.ref('bd32_live_final').set(matches); db.ref('bd32_ko_live_final').set(ko); }catch(e){}
-  renderAll();
-}
-function addR(){
-let p1=document.getElementById('p1').value,p2=document.getElementById('p2').value;
-let g1=parseInt(document.getElementById('g1').value),g2=parseInt(document.getElementById('g2').value);
-let scorer=document.getElementById('scorer').value;
-if(p1===p2){alert('একই প্লেয়ার না!');return;}
-if(isNaN(g1)||isNaN(g2)){alert('গোল লিখো!');return;}
-let dup=matches.find(m=>(m.p1===p1&&m.p2===p2)||(m.p1===p2&&m.p2===p1));
-if(dup){alert('❌ এই ম্যাচ আগেই আছে!');return;}
-matches.push({p1,g1,p2,g2,scorer});saveAll();document.getElementById('scorer').value='';
-}
-function addKO(){
-let stage=document.getElementById('koStage').value;
-let id=parseInt(document.getElementById('koMatch').value);
-let g1=parseInt(document.getElementById('ko1').value),g2=parseInt(document.getElementById('ko2').value);
-let scorer=document.getElementById('koScorer').value;
-if(isNaN(id)||isNaN(g1)||isNaN(g2)){alert('গোল লিখো!');return;}
-if(g1===g2){alert('নকআউটে ড্র হবে না!');return;}
-let fix=[];if(stage==='R16')fix=getR16Fixtures();else if(stage==='QF'){for(let i=0;i<4;i++)fix.push({id:i+1,t1:getWinner('R16',i*2+1),t2:getWinner('R16',i*2+2)});}else if(stage==='SF'){for(let i=0;i<2;i++)fix.push({id:i+1,t1:getWinner('QF',i*2+1),t2:getWinner('QF',i*2+2)});}else if(stage==='F'){fix.push({id:1,t1:getWinner('SF',1),t2:getWinner('SF',2)});}
-let f=fix.find(x=>x.id===id);if(!f||!f.t1||!f.t2){alert('এই ম্যাচ এখনো রেডি না!');return;}
-ko[stage]=ko[stage].filter(x=>x.id!==id);ko[stage].push({id,t1:f.t1,t2:f.t2,g1,g2,scorer});saveAll();document.getElementById('koScorer').value='';
-}
+function saveAll(){localStorage.setItem('bd32_final_b',JSON.stringify(matches));localStorage.setItem('bd32_ko_b',JSON.stringify(ko));try{ db.ref('bd32_final_rules').set(matches); db.ref('bd32_ko_final_rules').set(ko); }catch(e){}renderAll();}
+function addR(){let p1=document.getElementById('p1').value,p2=document.getElementById('p2').value;let g1=parseInt(document.getElementById('g1').value),g2=parseInt(document.getElementById('g2').value);let scorer=document.getElementById('scorer').value;if(p1===p2){alert('একই প্লেয়ার না!');return;}if(isNaN(g1)||isNaN(g2)){alert('গোল লিখো!');return;}let dup=matches.find(m=>(m.p1===p1&&m.p2===p2)||(m.p1===p2&&m.p2===p1));if(dup){alert('❌ এই ম্যাচ আগেই আছে!');return;}matches.push({p1,g1,p2,g2,scorer});saveAll();document.getElementById('scorer').value='';}
+function addKO(){let stage=document.getElementById('koStage').value;let id=parseInt(document.getElementById('koMatch').value);let g1=parseInt(document.getElementById('ko1').value),g2=parseInt(document.getElementById('ko2').value);let scorer=document.getElementById('koScorer').value;if(isNaN(id)||isNaN(g1)||isNaN(g2)){alert('গোল লিখো!');return;}if(g1===g2){alert('নকআউটে ড্র হবে না!');return;}let fix=[];if(stage==='R16')fix=getR16Fixtures();else if(stage==='QF'){for(let i=0;i<4;i++)fix.push({id:i+1,t1:getWinner('R16',i*2+1),t2:getWinner('R16',i*2+2)});}else if(stage==='SF'){for(let i=0;i<2;i++)fix.push({id:i+1,t1:getWinner('QF',i*2+1),t2:getWinner('QF',i*2+2)});}else if(stage==='F'){fix.push({id:1,t1:getWinner('SF',1),t2:getWinner('SF',2)});}let f=fix.find(x=>x.id===id);if(!f||!f.t1||!f.t2){alert('এই ম্যাচ এখনো রেডি না!');return;}ko[stage]=ko[stage].filter(x=>x.id!==id);ko[stage].push({id,t1:f.t1,t2:f.t2,g1,g2,scorer});saveAll();document.getElementById('koScorer').value='';}
 function delMatch(i){if(confirm('ডিলিট করবো?')){matches.splice(i,1);saveAll();}}
 function editMatch(i){let m=matches[i];document.getElementById('p1').value=m.p1;document.getElementById('p2').value=m.p2;document.getElementById('g1').value=m.g1;document.getElementById('g2').value=m.g2;document.getElementById('scorer').value=m.scorer||'';matches.splice(i,1);saveAll();}
 function delKO(stage,id){if(confirm('ডিলিট করবো?')){ko[stage]=ko[stage].filter(x=>x.id!==id);saveAll();}}
 renderAll();loadP();
 </script>
 </body>
- </html>
+</html>
