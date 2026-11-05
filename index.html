@@ -1,37 +1,61 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BD BROTHERS 32 - AUTO</title>
+<title>BD BROTHERS 32 - FINAL</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
-body{background:#0a1020;color:#fff}
-.top{padding:12px;background:#0f172a;text-align:center;border-bottom:2px solid #facc15}
-.admin{background:#151b2e;margin:10px;padding:14px;border-radius:16px;border:2px solid #22d3ee}
-.admin input, .admin select{padding:8px;margin:4px;border-radius:8px;background:#0f172a;color:#fff;border:1px solid #334155}
-.btn{background:#22d3ee;color:#000;border:none;padding:10px 20px;border-radius:20px;font-weight:bold;cursor:pointer;margin-top:6px}
+body{background:#0a1020;color:#fff;padding-bottom:30px}
+.top{padding:14px;background:#0f172a;text-align:center;border-bottom:3px solid #facc15}
+.top h2{color:#facc15;font-size:16px}
+.rules{background:linear-gradient(135deg,#1a1020,#0f172a);border:3px solid #facc15;border-radius:18px;padding:14px;margin:12px}
+.sec{background:#0f172a;border-radius:12px;padding:10px;margin:8px 0;border-left:4px solid #22d3ee}
+.sec h3{color:#facc15;font-size:13px;margin-bottom:4px}
+.sec p{font-size:11px;line-height:1.6}
+.deadline{background:#330000;border:3px solid #ff0000;border-radius:14px;padding:10px;margin:12px;text-align:center}
+.lock{background:#1a1020;border:2px solid #facc15;border-radius:14px;padding:14px;margin:12px;text-align:center}
+.admin{background:#151b2e;border:2px solid #22d3ee;border-radius:16px;padding:14px;margin:12px;display:none}
+.admin input,.admin select{padding:8px;margin:4px;border-radius:8px;background:#0f172a;color:#fff;border:1px solid #334155}
+.btn{padding:10px 20px;border:none;border-radius:20px;font-weight:bold;cursor:pointer}
+.btn-gold{background:#facc15;color:#000}
+.btn-cyan{background:#22d3ee;color:#000}
 .group-box{background:#151b2e;border-radius:18px;padding:14px;margin:14px 12px;border:1px solid #2a344e}
-.group-title{color:#facc15;font-size:18px;font-weight:bold;border-bottom:1px solid #2a344e;padding-bottom:6px;margin-bottom:8px}
-.player-row{display:flex;justify-content:space-between;background:#1e293b;border-radius:12px;padding:10px;margin:5px 0;font-size:13px}
+.group-title{color:#facc15;font-size:17px;font-weight:bold;border-bottom:1px solid #2a344e;padding-bottom:6px;margin-bottom:8px}
+.player-row{display:flex;justify-content:space-between;background:#1e293b;border-radius:11px;padding:9px 11px;margin:5px 0;font-size:13px}
 .pts{color:#22d3ee;font-weight:bold}
-.final-box{background:#1a1020;border:2px solid #facc15;border-radius:16px;padding:12px;margin:10px}
 </style>
 </head>
 <body>
-<div class="top"><h2 style="color:#facc15">🏆 BD BROTHERS 32 - AUTO GOAL SYSTEM 🏆</h2><p style="font-size:11px;color:#94a3b8">শুধু গোল লিখো - Win/Draw/Point অটো</p></div>
+<div class="top"><h2>🏆 BD BROTHERS 32 - CHAMPIONSHIP 🏆</h2><p style="font-size:11px;color:#94a3b8">BD Brothers eFootball Tournament</p></div>
 
-<div class="admin">
-<h3 style="color:#22d3ee">⚙️ RESULT ADD (শুধু গোল লিখো)</h3>
-<select id="grp" onchange="loadPlayers()"><option>GROUP A</option><option>GROUP B</option><option>GROUP C</option><option>GROUP D</option><option>GROUP E</option><option>GROUP F</option><option>GROUP G</option><option>GROUP H</option></select><br>
-<select id="p1"></select> <input type="number" id="g1" placeholder="গোল" style="width:55px"> VS <input type="number" id="g2" placeholder="গোল" style="width:55px"> <select id="p2"></select><br>
-<button class="btn" onclick="addResult()">✅ ADD - অটো পয়েন্ট</button>
-<p style="font-size:11px;color:#94a3b8;margin-top:5px">Juyel 2-1 Morsalin = Juyel 3pts অটো, Morsalin 0pts অটো | 1-1 Draw = দুজনের 1pt অটো</p>
+<div class="rules">
+<h2 style="text-align:center;color:#facc15;font-size:15px">🏆 FINAL RULES - আগের নিয়মই থাকবে 🏆</h2>
+<div class="sec"><h3>📌 SECTION 1: MATCH SETTINGS</h3><p>1. Condition: Excellent (Home & Away)<br>2. Smart Assist: OFF - ভিডিও প্রমাণ লাগবে 🎥<br>3. Substitution: 6 জন<br>4. Double Dip: সম্পূর্ণ নিষিদ্ধ 🚫</p></div>
+<div class="sec" style="border-left-color:#00ff88"><h3>⚔️ SECTION 2: GROUP STAGE</h3><p>5. Injury: ON<br>6. Extra Time & PK: OFF<br>7. Match Time: 8 মিনিট<br>8. Point: Win 3 / Draw 1 / Loss 0<br>9. Qualification: প্রতি গ্রুপ থেকে ১ম ও ২য় - ২ জন R16 এ যাবে</p></div>
+<div class="sec" style="border-left-color:#ff9900"><h3>🔥 SECTION 3: KNOCKOUT</h3><p>10. Extra Time & PK: R16 থেকেই ON<br>11. Time: R16 8m | Quarter 10m | Semi 10m | FINAL 15m</p></div>
 </div>
 
-<div id="allGroups"></div>
+<div class="deadline"><h2 style="color:#ff4444;font-size:13px">⏰ DEADLINE: শুক্রবার, ৬ নভেম্বর, রাত ৯টা ⏰</h2></div>
+
+<div class="lock" id="lockBox">
+<h3 style="color:#facc15">🔒 ADMIN ONLY - শুধু তুমি পারবা</h3>
+<p style="font-size:11px;color:#94a3b8;margin:6px 0">বাকি সবাই শুধু দেখবে!</p>
+<input type="password" id="pass" placeholder="পাসওয়ার্ড দাও" style="padding:8px;border-radius:8px;background:#0f172a;color:#fff;border:1px solid #334155">
+<button class="btn btn-gold" onclick="unlock()">🔓 UNLOCK</button>
+</div>
+
+<div class="admin" id="adminBox">
+<h3 style="color:#22d3ee">⚙️ শুধু গোল লিখো - সব অটো আপডেট হবে</h3>
+<select id="grp" onchange="loadP()"><option>GROUP A</option><option>GROUP B</option><option>GROUP C</option><option>GROUP D</option><option>GROUP E</option><option>GROUP F</option><option>GROUP G</option><option>GROUP H</option></select><br>
+<select id="p1"></select> <input type="number" id="g1" placeholder="গোল" style="width:50px"> VS <input type="number" id="g2" placeholder="গোল" style="width:50px"> <select id="p2"></select><br>
+<button class="btn btn-cyan" onclick="addR()">✅ ADD - অটো পয়েন্ট</button>
+<button class="btn btn-gold" onclick="lock()" style="margin-left:5px">🔒 LOCK</button>
+</div>
+
+<div id="all"></div>
 
 <script>
-const groups = {
+const groups={
 "GROUP A":["DX Morsalin 👑","Dip Debnath Ovi","Juyel Mia","একটা থাপ্পর দিমু"],
 "GROUP B":["Abdur Rahman","Redowan Islam","Tanvir Ahamed","Oseem Mojumder"],
 "GROUP C":["M D Porash","Sk Shakib","Abrar Rihad","Towhid Ahmed Sani"],
@@ -41,46 +65,52 @@ const groups = {
 "GROUP G":["জিবন মিয়া","Shipon Al Hasan","Nazmul","NayemurRahman nayem"],
 "GROUP H":["NayeEm Ul Islam","Sayem Ahmed","MH Munna","Md. Hanif"]
 };
-let stats={};
-for(let g in groups){ groups[g].forEach(p=>stats[p]={W:0,D:0,L:0,GF:0,GA:0,PTS:0}); }
-
-function renderGroups(){
-let html='';
+let st={}; for(let g in groups){groups[g].forEach(p=>st[p]={W:0,D:0,L:0,GF:0,GA:0,PTS:0});}
+function render(){
+let h='';
 for(let g in groups){
-html+=`<div class="group-box"><div class="group-title">${g}</div><div style="display:flex;justify-content:space-between;color:#64748b;font-size:10px;padding:4px"><span>PLAYER</span><span>W D L | GF-GA | PTS</span></div>`;
+h+=`<div class="group-box"><div class="group-title">${g}</div><div style="display:flex;justify-content:space-between;color:#64748b;font-size:10px;padding:3px"><span>PLAYER</span><span>W D L | GF-GA | PTS</span></div>`;
 groups[g].forEach(p=>{
-let s=stats[p];
-html+=`<div class="player-row"><span>${p}</span><span data-p="${p}">${s.W}W ${s.D}D ${s.L}L | ${s.GF}-${s.GA} | <span class="pts">${s.PTS}</span></span></div>`;
+let s=st[p];
+h+=`<div class="player-row"><span>${p}</span><span>${s.W}W ${s.D}D ${s.L}L | ${s.GF}-${s.GA} | <span class="pts">${s.PTS}</span></span></div>`;
 });
-html+=`</div>`;
+h+=`</div>`;
 }
-document.getElementById('allGroups').innerHTML=html;
+document.getElementById('all').innerHTML=h;
 }
-function loadPlayers(){
+function loadP(){
 let g=document.getElementById('grp').value;
-let p1=document.getElementById('p1'),p2=document.getElementById('p2');
-p1.innerHTML='';p2.innerHTML='';
-groups[g].forEach(p=>{
-p1.innerHTML+=`<option>${p}</option>`;
-p2.innerHTML+=`<option>${p}</option>`;
-});
+let a=document.getElementById('p1'),b=document.getElementById('p2');
+a.innerHTML='';b.innerHTML='';
+groups[g].forEach(p=>{a.innerHTML+=`<option>${p}</option>`;b.innerHTML+=`<option>${p}</option>`;});
 }
-function addResult(){
+function unlock(){
+if(document.getElementById('pass').value==="Bdbrothers2026@"){
+document.getElementById('adminBox').style.display='block';
+document.getElementById('lockBox').style.display='none';
+alert('✅ Unlock হইছে ভাই!');
+}else{alert('❌ ভুল পাসওয়ার্ড!');}
+}
+function lock(){
+document.getElementById('adminBox').style.display='none';
+document.getElementById('lockBox').style.display='block';
+document.getElementById('pass').value='';
+}
+function addR(){
 let p1=document.getElementById('p1').value,p2=document.getElementById('p2').value;
 let g1=parseInt(document.getElementById('g1').value),g2=parseInt(document.getElementById('g2').value);
-if(p1===p2){alert('একই প্লেয়ার না ভাই!');return;}
+if(p1===p2){alert('একই প্লেয়ার না!');return;}
 if(isNaN(g1)||isNaN(g2)){alert('গোল লিখো!');return;}
-stats[p1].GF+=g1;stats[p1].GA+=g2;
-stats[p2].GF+=g2;stats[p2].GA+=g1;
-if(g1>g2){stats[p1].W++;stats[p1].PTS+=3;stats[p2].L++;}
-else if(g1<g2){stats[p2].W++;stats[p2].PTS+=3;stats[p1].L++;}
-else{stats[p1].D++;stats[p2].D++;stats[p1].PTS++;stats[p2].PTS++;}
-renderGroups();
-loadPlayers();
-document.getElementById('g1').value='';document.getElementById('g2').value='';
-alert(`✅ ${p1} ${g1}-${g2} ${p2} - পয়েন্ট অটো যোগ হয়েছে!`);
+st[p1].GF+=g1;st[p1].GA+=g2; st[p2].GF+=g2;st[p2].GA+=g1;
+if(g1>g2){st[p1].W++;st[p1].PTS+=3;st[p2].L++;}
+else if(g1<g2){st[p2].W++;st[p2].PTS+=3;st[p1].L++;}
+else{st[p1].D++;st[p2].D++;st[p1].PTS++;st[p2].PTS++;}
+render();
+document.getElementById('g1').value='';
+document.getElementById('g2').value='';
+alert(`✅ ${p1} ${g1}-${g2} ${p2} - অটো!`);
 }
-renderGroups();loadPlayers();
+render();loadP();
 </script>
 </body>
 </html>
