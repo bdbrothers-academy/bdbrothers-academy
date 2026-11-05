@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BD BROTHERS 32</title>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
 body{background:#0a1020;color:#fff;padding-bottom:30px}
 .top{padding:14px;background:#0f172a;text-align:center;border-bottom:3px solid #facc15}
-.msg{background:#002200;border:2px solid #00ff88;border-radius:14px;padding:12px;margin:12px;text-align:center}
-.msg a{background:#00ff88;color:#000;padding:8px 16px;border-radius:20px;text-decoration:none;font-weight:bold;display:inline-block;margin-top:6px}
+.status{background:#002200;border:2px solid #00ff88;border-radius:14px;padding:8px;margin:12px;text-align:center;font-size:12px;color:#00ff88}
 .rules-main{background:#1a1020;border:3px solid #facc15;border-radius:22px;padding:14px;margin:12px}
 .rules-title{text-align:center;color:#facc15;font-size:18px;font-weight:bold;margin-bottom:12px}
 .sec{border-radius:14px;padding:12px;margin:10px 0;background:#111a33}
@@ -41,8 +42,9 @@ body{background:#0a1020;color:#fff;padding-bottom:30px}
 </style>
 </head>
 <body>
-<div class="top"><h2>🏆 BD BROTHERS 32 🏆</h2></div>
-<div class="msg"><div style="font-size:12px">📱 Messenger থেকে ঢুকলে সঠিকভাবে দেখতে Chrome এ খুলো 👇</div><a href="#" onclick="window.open(location.href,'_blank')">🌐 Chrome এ খুলুন</a></div>
+<div class="top"><h2>🏆 BD BROTHERS 32 🏆</h2><p style="font-size:10px;color:#22ff88">🟢 LIVE - সব জায়গায় একই দেখাবে</p></div>
+<div class="status" id="status">🟢 LIVE Connected - Messenger & Chrome একই দেখাবে</div>
+
 <div class="rules-main">
 <h2 class="rules-title">🏆 TOURNAMENT RULES 🏆</h2>
 <div class="sec" style="border-left:4px solid #ff006a"><h3>📌 SECTION 1: MATCH SETTINGS</h3><p>1. Condition: Excellent (Home & Away)<br>2. Smart Assist: OFF - ভিডিও প্রমাণ লাগবে 🎥<br>3. Substitution: 6 জন<br>4. Double Dip: সম্পূর্ণ নিষিদ্ধ 🚫</p></div>
@@ -50,8 +52,11 @@ body{background:#0a1020;color:#fff;padding-bottom:30px}
 <div class="sec" style="border-left:4px solid #ff9900"><h3>🔥 SECTION 3: KNOCKOUT</h3><p>10. Extra Time & PK: R16 থেকেই ON<br>11. R16 8m | QF 10m | SF 10m | FINAL 15m<br>12. Draw হলে Extra Time, তারপর Penalty</p></div>
 <div class="sec" style="border-left:4px solid #facc15"><h3>📜 SECTION 4: GENERAL</h3><p>13. Deadline এর মধ্যে ম্যাচ শেষ<br>14. Opponent কে Mention<br>15. Screenshot / Video Proof<br>16. Admin এর সিদ্ধান্তই চূড়ান্ত</p></div>
 </div>
+
 <div class="deadline"><h2 style="color:#ff5555;font-size:15px">⏰ DEADLINE: শুক্রবার, ৬ নভেম্বর, রাত ৯টা ⏰</h2></div>
-<div class="lock" id="lockBox"><h3 style="color:#facc15">🔒 ADMIN ONLY</h3><input type="password" id="pass" placeholder="পাসওয়ার্ড"><button class="btn btn-gold" onclick="unlock()">🔓 UNLOCK</button></div>
+
+<div class="lock" id="lockBox"><h3 style="color:#facc15">🔒 ADMIN ONLY</h3><input type="password" id="pass" placeholder="পাসওয়ার্ড"><button class="btn btn-gold" onclick="unlock()">🔓 UNLOCK</button><p style="font-size:10px;color:#94a3b8;margin-top:6px">তুমি Chrome থেকে আনলক করে ফলাফল দিবা</p></div>
+
 <div class="admin" id="adminBox">
 <h3 style="color:#22d3ee">⚙️ ফলাফল + কে কয় গোল - Chrome থেকে</h3>
 <select id="grp" onchange="loadP()"><option>GROUP A</option><option>GROUP B</option><option>GROUP C</option><option>GROUP D</option><option>GROUP E</option><option>GROUP F</option><option>GROUP G</option><option>GROUP H</option></select>
@@ -67,6 +72,7 @@ body{background:#0a1020;color:#fff;padding-bottom:30px}
 <div class="match-list" id="matchList"></div>
 <button class="btn btn-gold" onclick="lock()">🔒 LOCK</button>
 </div>
+
 <div class="tabs">
 <div class="tab active" onclick="showTab('groups')">GROUP</div>
 <div class="tab" onclick="showTab('r16')">ROUND OF 16</div>
@@ -74,12 +80,28 @@ body{background:#0a1020;color:#fff;padding-bottom:30px}
 <div class="tab" onclick="showTab('sf')">SEMI FINAL</div>
 <div class="tab" onclick="showTab('f')">FINAL</div>
 </div>
+
 <div id="tab-groups"></div>
 <div id="tab-r16" style="display:none"></div>
 <div id="tab-qf" style="display:none"></div>
 <div id="tab-sf" style="display:none"></div>
 <div id="tab-f" style="display:none"></div>
+
 <script>
+// Firebase Config - তোমার প্রজেক্টের জন্য
+const firebaseConfig = {
+  apiKey: "AIzaSyDummyKeyForBD32TournamentLive2026",
+  authDomain: "bdbrothers-32-live.firebaseapp.com",
+  databaseURL: "https://bdbrothers-32-live-default-rtdb.firebaseio.com",
+  projectId: "bdbrothers-32-live",
+  storageBucket: "bdbrothers-32-live.appspot.com",
+  messagingSenderId: "123456789012",
+  appId: "1:123456789012:web:abcdef123456"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
 const groups={
 "GROUP A":["DX Morsalin","Dip Debnath Ovi","Juyel Mia","একটা থাপ্পর দিমু"],
 "GROUP B":["Abdur Rahman","Redowan Islam","Tanvir Ahamed","Oseem Mojumder"],
@@ -90,10 +112,11 @@ const groups={
 "GROUP G":["জিবন মিয়া","Shipon Al Hasan","Nazmul","NayemurRahman nayem"],
 "GROUP H":["Fk Faiag","Sayem Ahmed","MH Munna","Md. Hanif"]
 };
-let matches=JSON.parse(localStorage.getItem('bd32_final')||'[]');
-let ko=JSON.parse(localStorage.getItem('bd32_ko')||'{"R16":[],"QF":[],"SF":[],"F":[]}');
-matches=matches.map(m=>{if(m.p1==="DX Morsalin 👑")m.p1="DX Morsalin"; if(m.p2==="DX Morsalin 👑")m.p2="DX Morsalin"; return m;});
-localStorage.setItem('bd32_final',JSON.stringify(matches));
+let matches=[], ko={"R16":[],"QF":[],"SF":[],"F":[]};
+
+db.ref('bd32_final').on('value', snap=>{ matches=snap.val()||[]; renderAll(); document.getElementById('status').innerText='🟢 LIVE - সব জায়গায় একই'; });
+db.ref('bd32_ko').on('value', snap=>{ ko=snap.val()||{"R16":[],"QF":[],"SF":[],"F":[]}; renderAll(); });
+
 function getStats(){
 let st={};for(let g in groups){groups[g].forEach(p=>st[p]={W:0,D:0,L:0,GF:0,GA:0,PTS:0,GD:0,MP:0});}
 matches.forEach(m=>{
@@ -225,9 +248,8 @@ if(isNaN(g1)||isNaN(g2)){alert('গোল লিখো!');return;}
 let dup=matches.find(m=>(m.p1===p1&&m.p2===p2)||(m.p1===p2&&m.p2===p1));
 if(dup){alert('❌ এই ম্যাচ আগেই আছে!');return;}
 matches.push({p1,g1,p2,g2,scorer});
-localStorage.setItem('bd32_final',JSON.stringify(matches));
+db.ref('bd32_final').set(matches);
 document.getElementById('scorer').value='';
-renderAll();
 }
 function addKO(){
 let stage=document.getElementById('koStage').value;
@@ -245,14 +267,13 @@ let f=fix.find(x=>x.id===id);
 if(!f||!f.t1||!f.t2){alert('এই ম্যাচ এখনো রেডি না!');return;}
 ko[stage]=ko[stage].filter(x=>x.id!==id);
 ko[stage].push({id,t1:f.t1,t2:f.t2,g1,g2,scorer});
-localStorage.setItem('bd32_ko',JSON.stringify(ko));
+db.ref('bd32_ko').set(ko);
 document.getElementById('koScorer').value='';
-renderAll();
 }
-function delMatch(i){if(confirm('ডিলিট করবো?')){matches.splice(i,1);localStorage.setItem('bd32_final',JSON.stringify(matches));renderAll();}}
-function editMatch(i){let m=matches[i];document.getElementById('p1').value=m.p1;document.getElementById('p2').value=m.p2;document.getElementById('g1').value=m.g1;document.getElementById('g2').value=m.g2;document.getElementById('scorer').value=m.scorer||'';matches.splice(i,1);localStorage.setItem('bd32_final',JSON.stringify(matches));renderAll();}
-function delKO(stage,id){if(confirm('ডিলিট করবো?')){ko[stage]=ko[stage].filter(x=>x.id!==id);localStorage.setItem('bd32_ko',JSON.stringify(ko));renderAll();}}
+function delMatch(i){if(confirm('ডিলিট করবো?')){matches.splice(i,1);db.ref('bd32_final').set(matches);}}
+function editMatch(i){let m=matches[i];document.getElementById('p1').value=m.p1;document.getElementById('p2').value=m.p2;document.getElementById('g1').value=m.g1;document.getElementById('g2').value=m.g2;document.getElementById('scorer').value=m.scorer||'';matches.splice(i,1);db.ref('bd32_final').set(matches);}
+function delKO(stage,id){if(confirm('ডিলিট করবো?')){ko[stage]=ko[stage].filter(x=>x.id!==id);db.ref('bd32_ko').set(ko);}}
 renderAll();loadP();
 </script>
 </body>
-</html>
+                                                                                                                                                                    </html>
