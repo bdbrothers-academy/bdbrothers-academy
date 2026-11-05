@@ -7,7 +7,6 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
 body{background:#0a1020;color:#fff}
 .top{padding:15px;display:flex;justify-content:space-between;align-items:center;background:#0f172a;border-bottom:1px solid #1e293b}
-.join{background:#22d3ee;color:#000;border:none;padding:10px 22px;border-radius:20px;font-weight:bold}
 .hero{padding:20px 15px}
 .stats{display:flex;gap:10px;margin:15px 0}
 .stat{flex:1;background:#151d32;border-radius:12px;padding:15px;text-align:center}
@@ -16,17 +15,18 @@ body{background:#0a1020;color:#fff}
 .section{background:#0f172a;border-radius:14px;padding:14px;margin:10px 0;border-left:4px solid #22d3ee}
 .section h3{color:#facc15;margin-bottom:8px;font-size:15px}
 .section p{font-size:13px;margin:5px 0;line-height:1.4}
-.group-box{background:#151b2e;border-radius:18px;padding:14px;margin:14px 12px}
+.group-box{background:#151b2e;border-radius:18px;padding:14px;margin:14px 12px;border:1px solid #2a344e}
 .group-title{color:#facc15;font-size:19px;font-weight:bold;padding-bottom:8px;border-bottom:1px solid #2a344e;margin-bottom:10px}
-.player{background:#1e293b;border-radius:12px;padding:12px 14px;margin:7px 0;text-align:center;font-size:14px;font-weight:500}
+.table-head{display:flex;justify-content:space-between;padding:6px;color:#64748b;font-size:10px}
+.player-row{display:flex;justify-content:space-between;align-items:center;background:#1e293b;border-radius:12px;padding:10px 12px;margin:6px 0;font-size:13px}
+.pts{color:#22d3ee;font-weight:bold;font-size:14px}
 .deadline{background:#330000;border:3px solid #ff0000;border-radius:15px;padding:15px;margin:15px;text-align:center}
 </style>
 </head>
 <body>
-
 <div class="top">
 <div style="display:flex;gap:10px;align-items:center"><div style="width:42px;height:42px;border:2px solid #00d4ff;border-radius:10px;display:flex;align-items:center;justify-content:center;color:#00d4ff;font-weight:bold">BD</div><div><h2 style="font-size:15px">BD BROTHERS</h2><span style="color:#00d4ff;font-size:10px;letter-spacing:2px">ACADEMY</span></div></div>
-<button class="join">Join Now</button>
+<button style="background:#22d3ee;color:#000;border:none;padding:10px 22px;border-radius:20px;font-weight:bold">Join Now</button>
 </div>
 
 <div class="hero">
@@ -40,97 +40,62 @@ body{background:#0a1020;color:#fff}
 
 <div class="final-box">
 <h2 style="text-align:center;color:#facc15">🏆 BD BROTHERS 32 - FINAL RULES 🏆</h2>
-
-<div class="section">
-<h3>📌 SECTION 1: MATCH SETTINGS</h3>
-<p>1. Condition: Excellent (Home & Away)</p>
-<p>2. Smart Assist: OFF - ভিডিও প্রমাণ লাগবে 🎥</p>
-<p>3. Substitution: 6 জন</p>
-<p>4. Double Dip: সম্পূর্ণ নিষিদ্ধ 🚫</p>
+<div class="section"><h3>📌 SECTION 1: MATCH SETTINGS</h3><p>1. Condition: Excellent (Home & Away)</p><p>2. Smart Assist: OFF - ভিডিও প্রমাণ লাগবে 🎥</p><p>3. Substitution: 6 জন</p><p>4. Double Dip: সম্পূর্ণ নিষিদ্ধ 🚫</p></div>
+<div class="section" style="border-left-color:#00ff88"><h3>⚔️ SECTION 2: GROUP STAGE</h3><p>5. Injury: ON</p><p>6. Extra Time & PK: OFF</p><p>7. Match Time: 8 মিনিট</p><p>8. Point: Win 3 / Draw 1 / Loss 0</p><p>9. Qualification: প্রতি গ্রুপ থেকে ১ম ও ২য় - ২ জন R16 এ</p></div>
+<div class="section" style="border-left-color:#ff9900"><h3>🔥 SECTION 3: KNOCKOUT STAGE</h3><p>10. Extra Time & PK: R16 থেকেই ON</p><p>11. Match Time: R16: 8 মিনিট | Quarter: 10 মিনিট | Semi: 10 মিনিট | FINAL: 15 মিনিট</p></div>
 </div>
 
-<div class="section" style="border-left-color:#00ff88">
-<h3>⚔️ SECTION 2: GROUP STAGE</h3>
-<p>5. Injury: ON</p>
-<p>6. Extra Time & PK: OFF</p>
-<p>7. Match Time: 8 মিনিট</p>
-<p>8. Point: Win 3 / Draw 1 / Loss 0</p>
-<p>9. Qualification: প্রতি গ্রুপ থেকে ১ম ও ২য় - ২ জন R16 এ</p>
-</div>
+<div class="deadline"><h2 style="color:#ff4444">⏰ DEADLINE: শুক্রবার, ৬ নভেম্বর, রাত ৯:০০ টা ⏰</h2></div>
 
-<div class="section" style="border-left-color:#ff9900">
-<h3>🔥 SECTION 3: KNOCKOUT STAGE</h3>
-<p>10. Extra Time & PK: R16 থেকেই ON</p>
-<p>11. Match Time: R16: 8 মিনিট | Quarter: 10 মিনিট | Semi: 10 মিনিট | FINAL: 15 মিনিট</p>
-</div>
+<!-- GROUP A - আগের প্লেয়ার, আগের গ্রুপ -->
+<div class="group-box"><div class="group-title">GROUP A</div><div class="table-head"><span>PLAYER</span><span>W D L | GF-GA | PTS</span></div>
+<div class="player-row"><span>DX Morsalin 👑</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Dip Debnath Ovi</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span style="color:#22d3ee">Juyel Mia</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>একটা থাপ্পর দিমু</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div></div>
 
-</div>
+<div class="group-box"><div class="group-title">GROUP B</div><div class="table-head"><span>PLAYER</span><span>W D L | GF-GA | PTS</span></div>
+<div class="player-row"><span>Abdur Rahman</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Redowan Islam</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Tanvir Ahamed</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Oseem Mojumder</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div></div>
 
-<div class="deadline">
-<h2 style="color:#ff4444">⏰ DEADLINE: শুক্রবার, ৬ নভেম্বর, রাত ৯:০০ টা ⏰</h2>
-</div>
+<div class="group-box"><div class="group-title">GROUP C</div><div class="table-head"><span>PLAYER</span><span>W D L | GF-GA | PTS</span></div>
+<div class="player-row"><span>M D Porash</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Sk Shakib</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Abrar Rihad</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Towhid Ahmed Sani</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div></div>
 
-<!-- GROUPS WITHOUT DISTRICT -->
+<div class="group-box"><div class="group-title">GROUP D</div><div class="table-head"><span>PLAYER</span><span>W D L | GF-GA | PTS</span></div>
+<div class="player-row"><span>Risha Moni</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Sheikh Rohul</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Fara bi</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Naim Ahmed Niloy</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div></div>
 
-<div class="group-box"><div class="group-title">GROUP A</div>
-<div class="player" style="color:gold">DX Morsalin 👑</div>
-<div class="player">Dip Debnath Ovi</div>
-<div class="player" style="color:#22d3ee;font-weight:bold">Juyel Mia</div>
-<div class="player">একটা থাপ্পর দিমু</div>
-</div>
+<div class="group-box"><div class="group-title">GROUP E</div><div class="table-head"><span>PLAYER</span><span>W D L | GF-GA | PTS</span></div>
+<div class="player-row"><span>SHAMIM Hossain</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Milu Rahman</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Ewr Johirul Islam</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>P A R V E J</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div></div>
 
-<div class="group-box"><div class="group-title">GROUP B</div>
-<div class="player">Abdur Rahman</div>
-<div class="player">Redowan Islam</div>
-<div class="player">Tanvir Ahamed</div>
-<div class="player">Oseem Mojumder</div>
-</div>
+<div class="group-box"><div class="group-title">GROUP F</div><div class="table-head"><span>PLAYER</span><span>W D L | GF-GA | PTS</span></div>
+<div class="player-row"><span>Roni Ahmed Nir</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Rakib Ahmed</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Sakib Belayet</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>SK Isteak</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div></div>
 
-<div class="group-box"><div class="group-title">GROUP C</div>
-<div class="player">M D Porash</div>
-<div class="player">Sk Shakib</div>
-<div class="player">Abrar Rihad</div>
-<div class="player">Towhid Ahmed Sani</div>
-</div>
+<div class="group-box"><div class="group-title">GROUP G</div><div class="table-head"><span>PLAYER</span><span>W D L | GF-GA | PTS</span></div>
+<div class="player-row"><span>জিবন মিয়া</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Shipon Al Hasan</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Nazmul</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>NayemurRahman nayem</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div></div>
 
-<div class="group-box"><div class="group-title">GROUP D</div>
-<div class="player">Risha Moni</div>
-<div class="player">Sheikh Rohul</div>
-<div class="player">Fara bi</div>
-<div class="player">Naim Ahmed Niloy</div>
-</div>
+<div class="group-box"><div class="group-title">GROUP H</div><div class="table-head"><span>PLAYER</span><span>W D L | GF-GA | PTS</span></div>
+<div class="player-row"><span>NayeEm Ul Islam</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Sayem Ahmed</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>MH Munna</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div>
+<div class="player-row"><span>Md. Hanif</span><span>0W 0D 0L | 0-0 | <span class="pts">0</span></span></div></div>
 
-<div class="group-box"><div class="group-title">GROUP E</div>
-<div class="player">SHAMIM Hossain</div>
-<div class="player">Milu Rahman</div>
-<div class="player">Ewr Johirul Islam</div>
-<div class="player">P A R V E J</div>
-</div>
-
-<div class="group-box"><div class="group-title">GROUP F</div>
-<div class="player">Roni Ahmed Nir</div>
-<div class="player">Rakib Ahmed</div>
-<div class="player">Sakib Belayet</div>
-<div class="player">SK Isteak</div>
-</div>
-
-<div class="group-box"><div class="group-title">GROUP G</div>
-<div class="player">জিবন মিয়া</div>
-<div class="player">Shipon Al Hasan</div>
-<div class="player">Nazmul</div>
-<div class="player">NayemurRahman nayem</div>
-</div>
-
-<div class="group-box"><div class="group-title">GROUP H</div>
-<div class="player">NayeEm Ul Islam</div>
-<div class="player">Sayem Ahmed</div>
-<div class="player">MH Munna</div>
-<div class="player">Md. Hanif</div>
-</div>
-
-<div style="text-align:center;padding:20px;color:#facc15;font-size:12px">
-✨🔒 BD BROTHERS 32 - FINAL - 100% LOCKED 🔒✨
-</div>
-
+<div style="text-align:center;padding:20px;color:#facc15;font-size:12px"> ✨🔒 BD BROTHERS 32 - FINAL - 100% LOCKED 🔒✨ </div>
 </body>
- </html>
+</html>
