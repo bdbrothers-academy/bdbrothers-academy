@@ -1,28 +1,9 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BD BROTHERS 32 - FINAL</title>
-<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
-body{background:#0a0f1f;color:#fff;padding-bottom:80px}
-.top{padding:14px;background:#0f172a;text-align:center}
-.status{background:#002200;border:2px solid #00ff00}
-.rules-main{background:#141028;border:2px solid #facc15}
-.rules-title{text-align:center;color:#facc15;font-weight:bold}
-.sec{border-radius:16px;padding:14px;margin:12px}
-</style>
-</head>
-<body>
-<div style="text-align:center; background:#000; padding:15px 0;">
-  <img src="logo.png" alt="BD BROTHERS" style="width:200px; height:auto;">
-</div>
-<html lang="bn">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BD BROTHERS 32 - FINAL</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BD BROTHERS 32 - FINAL LIVE</title>
 <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
 <style>
@@ -35,10 +16,7 @@ body{background:#0a0f1f;color:#fff;padding-bottom:30px}
 .sec{border-radius:16px;padding:14px;margin:12px 0;background:#0f172a}
 .sec h3{color:#facc15;font-size:15px;margin-bottom:10px;font-weight:bold}
 .sec p{font-size:13px;line-height:1.9;color:#e2e8f0}
-.sec1{border-left:4px solid #ff006a;box-shadow:inset 4px 0 0 #ff006a22}
-.sec2{border-left:4px solid #00ff88;box-shadow:inset 4px 0 0 #00ff8822}
-.sec3{border-left:4px solid #ff9900;box-shadow:inset 4px 0 0 #ff990022}
-.sec4{border-left:4px solid #facc15;box-shadow:inset 4px 0 0 #facc1522}
+.sec1{border-left:4px solid #ff006a}.sec2{border-left:4px solid #00ff88}.sec3{border-left:4px solid #ff9900}.sec4{border-left:4px solid #facc15}
 .deadline{background:#3a0a0a;border:3px solid #ff0000;border-radius:18px;padding:14px;margin:14px 12px;text-align:center}
 .lock{background:#1a1020;border:2px solid #facc15;border-radius:14px;padding:14px;margin:12px;text-align:center}
 .admin{background:#151b2e;border:2px solid #22d3ee;border-radius:16px;padding:14px;margin:12px;display:none}
@@ -56,48 +34,15 @@ body{background:#0a0f1f;color:#fff;padding-bottom:30px}
 <div class="top"><h2>🏆 BD BROTHERS 32 🏆</h2><p style="font-size:10px;color:#22ff88">🟢 FINAL LIVE - তুমি আপডেট দিলে সবখানে একই</p></div>
 <div class="status" id="status">🟢 LIVE Connected</div>
 
-<!-- তোমার স্ক্রিনশটের রুলস ১০০% একই -->
 <div class="rules-main">
 <h2 class="rules-title">🏆 TOURNAMENT RULES - FINAL 🏆</h2>
-
-<div class="sec sec1">
-<h3>📌 SECTION 1: MATCH SETTINGS - ম্যাচ সেটিংস</h3>
-<p>1. Condition: Excellent (Home & Away) - উভয়ের Excellent থাকবে<br>
-2. Smart Assist: OFF - অবশ্যই OFF রাখতে হবে, ভিডিও প্রমাণ লাগবে 🎥<br>
-3. Substitution: 6 জন Change করতে পারবে<br>
-4. Double Dip: সম্পূর্ণ নিষিদ্ধ 🚫 - করলে সরাসরি হার</p>
+<div class="sec sec1"><h3>📌 SECTION 1: MATCH SETTINGS - ম্যাচ সেটিংস</h3><p>1. Condition: Excellent (Home & Away) - উভয়ের Excellent থাকবে<br>2. Smart Assist: OFF - অবশ্যই OFF রাখতে হবে, ভিডিও প্রমাণ লাগবে 🎥<br>3. Substitution: 6 জন Change করতে পারবে<br>4. Double Dip: সম্পূর্ণ নিষিদ্ধ 🚫 - করলে সরাসরি হার</p></div>
+<div class="sec sec2"><h3>⚔️ SECTION 2: GROUP STAGE - গ্রুপ পর্ব</h3><p>5. Injury: ON থাকবে<br>6. Extra Time & PK: OFF থাকবে গ্রুপে<br>7. Match Time: 8 মিনিট<br>8. Point System: Win 3 / Draw 1 / Loss 0<br>9. Qualification: প্রতি গ্রুপ থেকে ১ম ও ২য় - ২ জন R16 এ যাবে</p></div>
+<div class="sec sec3"><h3>🔥 SECTION 3: KNOCKOUT - নকআউট পর্ব</h3><p>10. Extra Time & PK: R16 থেকেই ON থাকবে<br>11. Match Time: R16 8m | Quarter Final 10m | Semi Final 10m | FINAL 15m<br>12. Draw হলে Extra Time, তারপর Penalty</p></div>
+<div class="sec sec4"><h3>📜 SECTION 4: GENERAL RULES</h3><p>13. Deadline এর মধ্যে ম্যাচ শেষ করতে হবে<br>14. Opponent কে Mention দিতে হবে<br>15. Screenshot / Video Proof দিতে হবে<br>16. Admin এর সিদ্ধান্তই চূড়ান্ত</p></div>
 </div>
 
-<div class="sec sec2">
-<h3>⚔️ SECTION 2: GROUP STAGE - গ্রুপ পর্ব</h3>
-<p>5. Injury: ON থাকবে<br>
-6. Extra Time & PK: OFF থাকবে গ্রুপে<br>
-7. Match Time: 8 মিনিট<br>
-8. Point System: Win 3 / Draw 1 / Loss 0<br>
-9. Qualification: প্রতি গ্রুপ থেকে ১ম ও ২য় - ২ জন R16 এ যাবে</p>
-</div>
-
-<div class="sec sec3">
-<h3>🔥 SECTION 3: KNOCKOUT - নকআউট পর্ব</h3>
-<p>10. Extra Time & PK: R16 থেকেই ON থাকবে<br>
-11. Match Time: R16 8m | Quarter Final 10m | Semi Final 10m | FINAL 15m<br>
-12. Draw হলে Extra Time, তারপর Penalty</p>
-</div>
-
-<div class="sec sec4">
-<h3>📜 SECTION 4: GENERAL RULES</h3>
-<p>13. Deadline এর মধ্যে ম্যাচ শেষ করতে হবে<br>
-14. Opponent কে Mention দিতে হবে<br>
-15. Screenshot / Video Proof দিতে হবে<br>
-16. Admin এর সিদ্ধান্তই চূড়ান্ত</p>
-</div>
-</div>
-
-<div class="deadline">
-<h2 style="color:#ff5555;font-size:16px">⏰ DEADLINE: শুক্রবার, ৬ নভেম্বর, রাত ৯টা ⏰</h2>
-<p style="font-size:12px;margin-top:4px">সময়ের মধ্যে ম্যাচ শেষ করতে হবে</p>
-</div>
-
+<div class="deadline"><h2 style="color:#ff5555;font-size:16px">⏰ DEADLINE: শুক্রবার, ৬ নভেম্বর, রাত ৯টা ⏰</h2><p style="font-size:12px;margin-top:4px">সময়ের মধ্যে ম্যাচ শেষ করতে হবে</p></div>
 <div class="lock" id="lockBox"><h3 style="color:#facc15">🔒 ADMIN ONLY</h3><input type="password" id="pass" placeholder="Bdbrothers2026@"><button class="btn btn-gold" onclick="unlock()">🔓 UNLOCK</button></div>
 
 <div class="admin" id="adminBox">
@@ -117,11 +62,11 @@ body{background:#0a0f1f;color:#fff;padding-bottom:30px}
 </div>
 
 <div class="tabs">
-<div class="tab active" onclick="showTab('groups')">GROUP</div>
-<div class="tab" onclick="showTab('r16')">ROUND OF 16</div>
-<div class="tab" onclick="showTab('qf')">QUARTER FINAL</div>
-<div class="tab" onclick="showTab('sf')">SEMI FINAL</div>
-<div class="tab" onclick="showTab('f')">FINAL</div>
+<div class="tab active" onclick="showTab('groups',this)">GROUP</div>
+<div class="tab" onclick="showTab('r16',this)">ROUND OF 16</div>
+<div class="tab" onclick="showTab('qf',this)">QUARTER FINAL</div>
+<div class="tab" onclick="showTab('sf',this)">SEMI FINAL</div>
+<div class="tab" onclick="showTab('f',this)">FINAL</div>
 </div>
 <div id="tab-groups"></div>
 <div id="tab-r16" style="display:none"></div>
@@ -130,6 +75,7 @@ body{background:#0a0f1f;color:#fff;padding-bottom:30px}
 <div id="tab-f" style="display:none"></div>
 
 <script>
+// এখানে তোমার Firebase আসল Config বসাও - তাহলেই সবাই LIVE দেখবে
 const firebaseConfig = {
   apiKey: "AIzaSyB4pK0x1y2z3a4b5c6d7e8f9g0h1i2j3k4",
   authDomain: "bd-brothers-32-final.firebaseapp.com",
@@ -139,51 +85,29 @@ const firebaseConfig = {
   messagingSenderId: "987654321098",
   appId: "1:987654321098:web:1234567890abcdef"
 };
-try{ firebase.initializeApp(firebaseConfig); }catch(e){}
+try{firebase.initializeApp(firebaseConfig);}catch(e){}
 const db = firebase.database();
-
-const groups={
-"GROUP A":["DX Morsalin","Dip Debnath Ovi","Juyel Mia","একটা থাপ্পর দিমু"],
-"GROUP B":["Abdur Rahman","Redowan Islam","Tanvir Ahamed","Oseem Mojumder"],
-"GROUP C":["M D Porash","Sk Shakib","Abrar Rihad","Towhid Ahmed Sani"],
-"GROUP D":["Risha Moni","Sheikh Rohul","Fara bi","Naim Ahmed Niloy"],
-"GROUP E":["SHAMIM Hossain","Milu Rahman","Ewr Johirul Islam","P A R V E J"],
-"GROUP F":["Roni Ahmed Nir","Rakib Ahmed","Sakib Belayet","SK Isteak"],
-"GROUP G":["জিবন মিয়া","Shipon Al Hasan","Nazmul","NayemurRahman nayem"],
-"GROUP H":["Fk Faiag","Sayem Ahmed","MH Munna","Md. Hanif"]
-};
+const groups={"GROUP A":["DX Morsalin","Dip Debnath Ovi","Juyel Mia","একটা থাপ্পর দিমু"],"GROUP B":["Abdur Rahman","Redowan Islam","Tanvir Ahamed","Oseem Mojumder"],"GROUP C":["M D Porash","Sk Shakib","Abrar Rihad","Towhid Ahmed Sani"],"GROUP D":["Risha Moni","Sheikh Rohul","Fara bi","Naim Ahmed Niloy"],"GROUP E":["SHAMIM Hossain","Milu Rahman","Ewr Johirul Islam","P A R V E J"],"GROUP F":["Roni Ahmed Nir","Rakib Ahmed","Sakib Belayet","SK Isteak"],"GROUP G":["জিবন মিয়া","Shipon Al Hasan","Nazmul","NayemurRahman nayem"],"GROUP H":["Fk Faiag","Sayem Ahmed","MH Munna","Md. Hanif"]};
 let matches=[], ko={"R16":[],"QF":[],"SF":[],"F":[]};
-
 function initDB(){
-  db.ref('bd32_final_rules').on('value', snap=>{ if(snap.val()){ matches=snap.val(); localStorage.setItem('bd32_final_b',JSON.stringify(matches)); } renderAll(); });
-  db.ref('bd32_ko_final_rules').on('value', snap=>{ if(snap.val()){ ko=snap.val(); localStorage.setItem('bd32_ko_b',JSON.stringify(ko)); } renderAll(); });
-  let lm=JSON.parse(localStorage.getItem('bd32_final_b')||'[]'); let lk=JSON.parse(localStorage.getItem('bd32_ko_b')||'null');
-  if(lm.length>0 && matches.length===0) matches=lm; if(lk && ko.R16.length===0) ko=lk;
+ db.ref('bd32_final_rules').on('value', snap=>{ if(snap.val()){ matches=snap.val(); } renderAll(); });
+ db.ref('bd32_ko_final_rules').on('value', snap=>{ if(snap.val()){ ko=snap.val(); } renderAll(); });
 }
 initDB();
-
 function getStats(){let st={};for(let g in groups){groups[g].forEach(p=>st[p]={W:0,D:0,L:0,GF:0,GA:0,PTS:0,GD:0,MP:0});}matches.forEach(m=>{if(!st[m.p1]||!st[m.p2])return;st[m.p1].GF+=m.g1;st[m.p1].GA+=m.g2;st[m.p1].MP++;st[m.p2].GF+=m.g2;st[m.p2].GA+=m.g1;st[m.p2].MP++;if(m.g1>m.g2){st[m.p1].W++;st[m.p1].PTS+=3;st[m.p2].L++;}else if(m.g1<m.g2){st[m.p2].W++;st[m.p2].PTS+=3;st[m.p1].L++;}else{st[m.p1].D++;st[m.p2].D++;st[m.p1].PTS++;st[m.p2].PTS++;}});for(let p in st)st[p].GD=st[p].GF-st[p].GA;return st;}
 function getQualified(){let st=getStats(),q={};for(let g in groups){let sorted=[...groups[g]].sort((a,b)=>st[b].PTS!==st[a].PTS?st[b].PTS-st[a].PTS:st[b].GD!==st[a].GD?st[b].GD-st[a].GD:st[b].GF-st[a].GF);q[g]={first:sorted[0],second:sorted[1]};}return q;}
 function getR16Fixtures(){let q=getQualified();return[{id:1,t1:q["GROUP A"].first,t2:q["GROUP B"].second},{id:2,t1:q["GROUP C"].first,t2:q["GROUP D"].second},{id:3,t1:q["GROUP E"].first,t2:q["GROUP F"].second},{id:4,t1:q["GROUP G"].first,t2:q["GROUP H"].second},{id:5,t1:q["GROUP B"].first,t2:q["GROUP A"].second},{id:6,t1:q["GROUP D"].first,t2:q["GROUP C"].second},{id:7,t1:q["GROUP F"].first,t2:q["GROUP E"].second},{id:8,t1:q["GROUP H"].first,t2:q["GROUP G"].second},];}
 function getWinner(stage,id){let m=ko[stage].find(x=>x.id===id);if(!m)return null;return m.g1>m.g2?m.t1:m.t2;}
-function renderAll(){
-let st=getStats();let hg='';for(let g in groups){hg+=`<div class="group-box"><div class="group-title">${g}</div>`;let sorted=[...groups[g]].sort((a,b)=>st[b].PTS!==st[a].PTS?st[b].PTS-st[a].PTS:st[b].GD!==st[a].GD?st[b].GD-st[a].GD:st[b].GF-st[a].GF);sorted.forEach((p,i)=>{let s=st[p];hg+=`<div class="player-row ${i===0&&s.PTS>0?'first':''}"><span>${i+1}. ${p} <span class="mp">${s.MP}/3 ম্যাচ</span></span><span>${s.W}W ${s.D}D ${s.L}L | ${s.GF}-${s.GA} | <b class="pts">${s.PTS}</b></span></div>`;});hg+=`</div>`;}
-document.getElementById('tab-groups').innerHTML=hg;
-let r16=getR16Fixtures();let hr='<div class="ko-box"><div class="group-title">ROUND OF 16</div>';r16.forEach(f=>{let res=ko.R16.find(x=>x.id===f.id);hr+=`<div class="match"><span>${f.id}. ${res?`${res.t1} ${res.g1}-${res.g2} ${res.t2} → <span class="winner">${res.g1>res.g2?res.t1:res.t2}</span> ${res.scorer?`<div class="scorer">⚽ ${res.scorer}</div>`:''}`:`${f.t1} VS ${f.t2}`}</span></div>`;});hr+='</div>';document.getElementById('tab-r16').innerHTML=hr;
-let hq='<div class="ko-box"><div class="group-title">QUARTER FINAL</div>';for(let i=0;i<4;i++){let w1=getWinner('R16',i*2+1),w2=getWinner('R16',i*2+2);let res=ko.QF.find(x=>x.id===i+1);hq+=`<div class="match"><span>QF${i+1}. ${res?`${res.t1} ${res.g1}-${res.g2} ${res.t2} ${res.scorer?`<div class="scorer">⚽ ${res.scorer}</div>`:''}`:`${w1||'R16 Winner '+(i*2+1)} VS ${w2||'R16 Winner '+(i*2+2)}`}</span></div>`;}hq+='</div>';document.getElementById('tab-qf').innerHTML=hq;
-let hs='<div class="ko-box"><div class="group-title">SEMI FINAL</div>';for(let i=0;i<2;i++){let w1=getWinner('QF',i*2+1),w2=getWinner('QF',i*2+2);let res=ko.SF.find(x=>x.id===i+1);hs+=`<div class="match"><span>SF${i+1}. ${res?`${res.t1} ${res.g1}-${res.g2} ${res.t2} ${res.scorer?`<div class="scorer">⚽ ${res.scorer}</div>`:''}`:`${w1||'QF Winner '+(i*2+1)} VS ${w2||'QF Winner '+(i*2+2)}`}</span></div>`;}hs+='</div>';document.getElementById('tab-sf').innerHTML=hs;
-let w1=getWinner('SF',1),w2=getWinner('SF',2);let hf='<div class="ko-box"><div class="group-title">🏆 FINAL 🏆</div>';let rf=ko.F[0];hf+=`<div class="match"><span>FINAL: ${rf?`${rf.t1} ${rf.g1}-${rf.g2} ${rf.t2} → 🏆 ${rf.g1>rf.g2?rf.t1:rf.t2} CHAMPION ${rf.scorer?`<div class="scorer">⚽ ${rf.scorer}</div>`:''}`:`${w1||'SF1 Winner'} VS ${w2||'SF2 Winner'}`}</span></div></div>`;document.getElementById('tab-f').innerHTML=hf;
-renderMatchList();updateKOSelect();
-}
+function renderAll(){let st=getStats();let hg='';for(let g in groups){hg+=`<div class="group-box"><div class="group-title">${g}</div>`;let sorted=[...groups[g]].sort((a,b)=>st[b].PTS!==st[a].PTS?st[b].PTS-st[a].PTS:st[b].GD!==st[a].GD?st[b].GD-st[a].GD:st[b].GF-st[a].GF);sorted.forEach((p,i)=>{let s=st[p];hg+=`<div class="player-row ${i===0&&s.PTS>0?'first':''}"><span>${i+1}. ${p} <span class="mp">${s.MP}/3 ম্যাচ</span></span><span>${s.W}W ${s.D}D ${s.L}L | ${s.GF}-${s.GA} | <b class="pts">${s.PTS}</b></span></div>`;});hg+=`</div>`;}document.getElementById('tab-groups').innerHTML=hg;let r16=getR16Fixtures();let hr='<div class="ko-box"><div class="group-title">ROUND OF 16</div>';r16.forEach(f=>{let res=ko.R16.find(x=>x.id===f.id);hr+=`<div class="match"><span>${f.id}. ${res?`${res.t1} ${res.g1}-${res.g2} ${res.t2} → <span class="winner">${res.g1>res.g2?res.t1:res.t2}</span> ${res.scorer?`<div class="scorer">⚽ ${res.scorer}</div>`:''}`:`${f.t1} VS ${f.t2}`}</span></div>`;});hr+='</div>';document.getElementById('tab-r16').innerHTML=hr;let hq='<div class="ko-box"><div class="group-title">QUARTER FINAL</div>';for(let i=0;i<4;i++){let w1=getWinner('R16',i*2+1),w2=getWinner('R16',i*2+2);let res=ko.QF.find(x=>x.id===i+1);hq+=`<div class="match"><span>QF${i+1}. ${res?`${res.t1} ${res.g1}-${res.g2} ${res.t2} ${res.scorer?`<div class="scorer">⚽ ${res.scorer}</div>`:''}`:`${w1||'R16 Winner '+(i*2+1)} VS ${w2||'R16 Winner '+(i*2+2)}`}</span></div>`;}hq+='</div>';document.getElementById('tab-qf').innerHTML=hq;let hs='<div class="ko-box"><div class="group-title">SEMI FINAL</div>';for(let i=0;i<2;i++){let w1=getWinner('QF',i*2+1),w2=getWinner('QF',i*2+2);let res=ko.SF.find(x=>x.id===i+1);hs+=`<div class="match"><span>SF${i+1}. ${res?`${res.t1} ${res.g1}-${res.g2} ${res.t2} ${res.scorer?`<div class="scorer">⚽ ${res.scorer}</div>`:''}`:`${w1||'QF Winner '+(i*2+1)} VS ${w2||'QF Winner '+(i*2+2)}`}</span></div>`;}hs+='</div>';document.getElementById('tab-sf').innerHTML=hs;let w1=getWinner('SF',1),w2=getWinner('SF',2);let hf='<div class="ko-box"><div class="group-title">🏆 FINAL 🏆</div>';let rf=ko.F[0];hf+=`<div class="match"><span>FINAL: ${rf?`${rf.t1} ${rf.g1}-${rf.g2} ${rf.t2} → 🏆 ${rf.g1>rf.g2?rf.t1:rf.t2} CHAMPION ${rf.scorer?`<div class="scorer">⚽ ${rf.scorer}</div>`:''}`:`${w1||'SF1 Winner'} VS ${w2||'SF2 Winner'}`}</span></div></div>`;document.getElementById('tab-f').innerHTML=hf;renderMatchList();updateKOSelect();}
 function renderMatchList(){let html='<b style="color:#facc15">📋 সব ম্যাচ:</b><br>';matches.forEach((m,i)=>{html+=`<div class="match-item"><span>${i+1}. ${m.p1} ${m.g1}-${m.g2} ${m.p2} ${m.scorer?`<br><span style="color:#facc15">⚽ ${m.scorer}</span>`:''}</span><span><button class="btn btn-red" style="padding:4px 8px;font-size:10px" onclick="delMatch(${i})">❌</button> <button class="btn btn-cyan" style="padding:4px 8px;font-size:10px" onclick="editMatch(${i})">✏️</button></span></div>`;});for(let stage in ko){ko[stage].forEach(m=>{html+=`<div class="match-item" style="border-left:3px solid #facc15"><span>${stage} ${m.id}. ${m.t1} ${m.g1}-${m.g2} ${m.t2} ${m.scorer?`<br><span style="color:#facc15">⚽ ${m.scorer}</span>`:''}</span><span><button class="btn btn-red" style="padding:4px 8px;font-size:10px" onclick="delKO('${stage}',${m.id})">❌</button></span></div>`;});}document.getElementById('matchList').innerHTML=html;}
-function showTab(t){document.querySelectorAll('[id^=tab-]').forEach(e=>e.style.display='none');document.getElementById('tab-'+t).style.display='block';document.querySelectorAll('.tab').forEach(e=>e.classList.remove('active'));event.target.classList.add('active');}
+function showTab(t,el){document.querySelectorAll('[id^=tab-]').forEach(e=>e.style.display='none');document.getElementById('tab-'+t).style.display='block';document.querySelectorAll('.tab').forEach(e=>e.classList.remove('active'));if(el)el.classList.add('active');}
 function loadP(){let g=document.getElementById('grp').value;let a=document.getElementById('p1'),b=document.getElementById('p2');a.innerHTML='';b.innerHTML='';groups[g].forEach(p=>{a.innerHTML+=`<option>${p}</option>`;b.innerHTML+=`<option>${p}</option>`;});}
 function updateKOSelect(){let stage=document.getElementById('koStage').value;let sel=document.getElementById('koMatch');sel.innerHTML='';if(stage==='R16'){getR16Fixtures().forEach(f=>sel.innerHTML+=`<option value="${f.id}">${f.id}. ${f.t1} vs ${f.t2}</option>`);}else if(stage==='QF'){for(let i=0;i<4;i++){let w1=getWinner('R16',i*2+1),w2=getWinner('R16',i*2+2);if(w1&&w2)sel.innerHTML+=`<option value="${i+1}">${i+1}. ${w1} vs ${w2}</option>`;}if(!sel.innerHTML)sel.innerHTML='<option>R16 শেষ করো আগে</option>';}else if(stage==='SF'){for(let i=0;i<2;i++){let w1=getWinner('QF',i*2+1),w2=getWinner('QF',i*2+2);if(w1&&w2)sel.innerHTML+=`<option value="${i+1}">${i+1}. ${w1} vs ${w2}</option>`;}if(!sel.innerHTML)sel.innerHTML='<option>QF শেষ করো আগে</option>';}else if(stage==='F'){let w1=getWinner('SF',1),w2=getWinner('SF',2);if(w1&&w2)sel.innerHTML+=`<option value="1">FINAL: ${w1} vs ${w2}</option>`;else sel.innerHTML='<option>SF শেষ করো আগে</option>';}}
 document.getElementById('koStage').addEventListener('change',updateKOSelect);
 function unlock(){if(document.getElementById('pass').value==="Bdbrothers2026@"){document.getElementById('adminBox').style.display='block';document.getElementById('lockBox').style.display='none';}else alert('❌ ভুল পাসওয়ার্ড!');}
 function lock(){document.getElementById('adminBox').style.display='none';document.getElementById('lockBox').style.display='block';document.getElementById('pass').value='';}
-function saveAll(){localStorage.setItem('bd32_final_b',JSON.stringify(matches));localStorage.setItem('bd32_ko_b',JSON.stringify(ko));try{ db.ref('bd32_final_rules').set(matches); db.ref('bd32_ko_final_rules').set(ko); }catch(e){}renderAll();}
-function addR(){let p1=document.getElementById('p1').value,p2=document.getElementById('p2').value;let g1=parseInt(document.getElementById('g1').value),g2=parseInt(document.getElementById('g2').value);let scorer=document.getElementById('scorer').value;if(p1===p2){alert('একই প্লেয়ার না!');return;}if(isNaN(g1)||isNaN(g2)){alert('গোল লিখো!');return;}let dup=matches.find(m=>(m.p1===p1&&m.p2===p2)||(m.p1===p2&&m.p2===p1));if(dup){alert('❌ এই ম্যাচ আগেই আছে!');return;}matches.push({p1,g1,p2,g2,scorer});saveAll();document.getElementById('scorer').value='';}
+function saveAll(){try{ db.ref('bd32_final_rules').set(matches); db.ref('bd32_ko_final_rules').set(ko); document.getElementById('status').innerHTML='✅ LIVE Saved - সবাই দেখতে পাচ্ছে!'; }catch(e){console.log(e)}renderAll();}
+function addR(){let p1=document.getElementById('p1').value,p2=document.getElementById('p2').value;let g1=parseInt(document.getElementById('g1').value),g2=parseInt(document.getElementById('g2').value);let scorer=document.getElementById('scorer').value;if(p1===p2){alert('একই প্লেয়ার না!');return;}if(isNaN(g1)||isNaN(g2)){alert('গোল লিখো!');return;}matches.push({p1,g1,p2,g2,scorer});saveAll();document.getElementById('scorer').value='';}
 function addKO(){let stage=document.getElementById('koStage').value;let id=parseInt(document.getElementById('koMatch').value);let g1=parseInt(document.getElementById('ko1').value),g2=parseInt(document.getElementById('ko2').value);let scorer=document.getElementById('koScorer').value;if(isNaN(id)||isNaN(g1)||isNaN(g2)){alert('গোল লিখো!');return;}if(g1===g2){alert('নকআউটে ড্র হবে না!');return;}let fix=[];if(stage==='R16')fix=getR16Fixtures();else if(stage==='QF'){for(let i=0;i<4;i++)fix.push({id:i+1,t1:getWinner('R16',i*2+1),t2:getWinner('R16',i*2+2)});}else if(stage==='SF'){for(let i=0;i<2;i++)fix.push({id:i+1,t1:getWinner('QF',i*2+1),t2:getWinner('QF',i*2+2)});}else if(stage==='F'){fix.push({id:1,t1:getWinner('SF',1),t2:getWinner('SF',2)});}let f=fix.find(x=>x.id===id);if(!f||!f.t1||!f.t2){alert('এই ম্যাচ এখনো রেডি না!');return;}ko[stage]=ko[stage].filter(x=>x.id!==id);ko[stage].push({id,t1:f.t1,t2:f.t2,g1,g2,scorer});saveAll();document.getElementById('koScorer').value='';}
 function delMatch(i){if(confirm('ডিলিট করবো?')){matches.splice(i,1);saveAll();}}
 function editMatch(i){let m=matches[i];document.getElementById('p1').value=m.p1;document.getElementById('p2').value=m.p2;document.getElementById('g1').value=m.g1;document.getElementById('g2').value=m.g2;document.getElementById('scorer').value=m.scorer||'';matches.splice(i,1);saveAll();}
@@ -191,4 +115,4 @@ function delKO(stage,id){if(confirm('ডিলিট করবো?')){ko[stage]=
 renderAll();loadP();
 </script>
 </body>
-</html>
+  </html>
